@@ -1,0 +1,159 @@
+/* Ejemplo para un portal oscuro: importar después de bs-tokens-contract.css. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bs-color-brand-primary: #a78bfa;
+  --bs-color-brand-primary-hover: #c4b5fd;
+  --bs-color-brand-secondary: #ddd6fe;
+  --bs-color-brand-secondary-hover: #ede9fe;
+  --bs-color-action-primary: var(--bs-color-brand-primary);
+  --bs-color-action-primary-hover: var(--bs-color-brand-primary-hover);
+  --bs-color-action-secondary: var(--bs-color-brand-secondary);
+  --bs-color-focus-ring: var(--bs-color-brand-primary);
+  --bs-color-focus-shadow: rgb(167 139 250 / 0.3);
+  --bs-color-surface-page: #15121c;
+  --bs-color-surface-subtle: #1d1927;
+  --bs-color-surface-muted: #2a2536;
+  --bs-color-surface-inverse: #f5f3fa;
+  --bs-color-surface-highlight: #2a1f45;
+  --bs-color-text-body: #e9e5f0;
+  --bs-color-text-heading: #ffffff;
+  --bs-color-text-muted: #b8b0c8;
+  --bs-color-text-inverse: #15121c;
+  --bs-color-text-inverse-muted: #524b63;
+  --bs-color-text-on-primary: #1e0b3d;
+  --bs-color-border-default: #3d3650;
+  --bs-color-border-strong: #5a5270;
+  --bs-color-state-error: #ff8080;
+  --bs-color-state-error-surface: #3b1e24;
+  --bs-color-state-warning: #ffb86b;
+  --bs-color-state-success: #69d391;
+  --bs-color-state-success-surface: #183627;
+  --bs-color-status-info-text: #7dd3c7;
+  --bs-color-badge-progress: #ff9f1c;
+  --bs-color-badge-progress-surface: #3b2d1b;
+  --bs-color-badge-violet: #d09bff;
+  --bs-color-badge-violet-surface: #30213d;
+  --bs-badge-sm-padding-block: 0.125rem;
+  --bs-badge-sm-padding-inline: var(--space-2);
+  --bs-badge-sm-line-height: 1.4;
+  --bs-badge-md-padding-block: var(--space-1);
+  --bs-badge-md-padding-inline: var(--space-3);
+  --bs-badge-md-line-height: var(--line-height-heading);
+  --bs-badge-fixed-width: 148px;
+  --bs-badge-neutral-text: var(--bs-color-text-muted);
+  --bs-badge-neutral-background: var(--bs-color-surface-muted);
+  --bs-badge-neutral-border: var(--bs-color-border-strong);
+  --bs-badge-info-text: var(--bs-color-status-info-text);
+  --bs-badge-info-background: #183330;
+  --bs-badge-info-border: var(--bs-color-status-info-text);
+  --bs-badge-success-text: var(--bs-color-state-success);
+  --bs-badge-success-background: var(--bs-color-state-success-surface);
+  --bs-badge-success-border: var(--bs-color-state-success);
+  --bs-badge-warning-text: var(--bs-color-state-warning);
+  --bs-badge-warning-background: #3b3021;
+  --bs-badge-warning-border: var(--bs-color-state-warning);
+  --bs-badge-error-text: var(--bs-color-state-error);
+  --bs-badge-error-background: var(--bs-color-state-error-surface);
+  --bs-badge-error-border: var(--bs-color-state-error);
+  --bs-badge-critical-text: var(--bs-color-action-danger);
+  --bs-badge-critical-background: var(--bs-color-state-error-surface);
+  --bs-badge-critical-border: var(--bs-color-action-danger);
+  --bs-badge-progress-text: var(--bs-color-badge-progress);
+  --bs-badge-progress-background: var(--bs-color-badge-progress-surface);
+  --bs-badge-progress-border: var(--bs-color-badge-progress);
+  --bs-badge-violet-text: var(--bs-color-badge-violet);
+  --bs-badge-violet-background: var(--bs-color-badge-violet-surface);
+  --bs-badge-violet-border: var(--bs-color-badge-violet);
+  --bs-alert-danger-background: var(--bs-color-state-error-surface);
+  --bs-alert-danger-border: var(--bs-color-state-error);
+  --bs-alert-danger-text: var(--bs-color-state-error);
+  --bs-alert-warning-background: #3b3021;
+  --bs-alert-warning-border: var(--bs-color-state-warning);
+  --bs-alert-warning-text: var(--bs-color-state-warning);
+  --bs-alert-info-background: #183330;
+  --bs-alert-info-border: var(--bs-color-status-info-text);
+  --bs-alert-info-text: var(--bs-color-status-info-text);
+  --bs-alert-primary-background: var(--bs-color-surface-highlight);
+  --bs-alert-primary-border: var(--bs-color-brand-primary);
+  --bs-alert-primary-text: var(--bs-color-brand-primary);
+  --bs-alert-secondary-background: var(--bs-color-surface-muted);
+  --bs-alert-secondary-border: var(--bs-color-text-muted);
+  --bs-alert-secondary-text: var(--bs-color-text-body);
+  --bs-alert-close-hover-background: var(--bs-color-surface-page);
+  --bs-form-field-gap: calc(var(--space-2) * 0.75);
+  --bs-form-section-gap: var(--space-3);
+  --bs-form-label-color: var(--bs-color-text-muted);
+  --bs-form-value-color: var(--bs-color-text-heading);
+  --bs-form-label-size: var(--text-label-size);
+  --bs-choice-field-min-height: var(--control-height-sm);
+  --bs-tabs-margin-bottom: var(--space-0);
+  --bs-field-gap: var(--space-2);
+  --bs-field-message-min-height: calc(
+    var(--font-size-xs) * var(--line-height-heading)
+  );
+  --bs-card-background: var(--bs-color-surface-subtle);
+  --bs-card-padding-compact: var(--space-4);
+
+  --bs-table-cell-leading: var(--line-height-heading);
+  --bs-table-row-min-height: 40px;
+  --base-field-gap: var(--bs-field-gap);
+  --base-field-message-min-height: var(--bs-field-message-min-height);
+  --bs-color-surface-inverse-hover: #e9e5f0;
+  --bs-control-background: var(--bs-color-surface-page);
+  --bs-control-focus-background: var(--bs-color-surface-muted);
+  --bs-overlay-background: var(--bs-color-surface-muted);
+  --bs-control-border: var(--bs-color-border-strong);
+  --bs-control-disabled-background: var(--bs-color-surface-muted);
+  --bs-control-disabled-border: var(--bs-color-border-strong);
+  --bs-control-hover-border: var(--bs-color-text-muted);
+  --bs-control-focus-border: var(--bs-color-brand-primary);
+  --bs-control-focus-shadow: var(--bs-color-focus-shadow);
+  --bs-dialog-backdrop-background: rgb(21 18 28 / 0.62);
+  --bs-loading-overlay-background: color-mix(
+    in srgb,
+    var(--bs-color-surface-page) 72%,
+    transparent
+  );
+  --bs-tooltip-border: color-mix(
+    in srgb,
+    var(--bs-color-text-muted) 20%,
+    var(--bs-color-border-default)
+  );
+  --bs-signature-canvas-background: #15121c;
+  --bs-signature-guide-color: #958da6;
+  --bs-signature-ink-color: #ffffff;
+  --bs-breadcrumb-gap-block: var(--space-1);
+  --bs-breadcrumb-gap-inline: var(--space-2);
+  --bs-breadcrumb-transition: var(--transition-fast);
+  --bs-breadcrumb-underline-offset: var(--space-1);
+  --bs-breadcrumb-focus-radius: var(--radius-sm);
+  --bs-breadcrumb-focus-width: var(--focus-outline-width);
+  --bs-breadcrumb-focus-offset: var(--focus-outline-offset);
+  --bs-date-picker-menu-background: var(--bs-color-surface-subtle);
+  --bs-date-picker-menu-text: var(--bs-color-text-body);
+  --bs-date-picker-menu-hover-background: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-hover-text: var(--bs-color-text-heading);
+  --bs-date-picker-menu-hover-icon: var(--bs-color-text-heading);
+  --bs-date-picker-menu-selected-background: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-selected-text: var(--bs-color-text-on-primary);
+  --bs-date-picker-menu-selected-disabled: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-muted-text: var(--bs-color-text-muted);
+  --bs-date-picker-menu-border: var(--bs-color-border-strong);
+  --bs-date-picker-menu-hover-border: var(--bs-color-border-strong);
+  --bs-date-picker-menu-focus-border: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-disabled-background: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-disabled-text: var(--bs-color-text-muted);
+  --bs-date-picker-menu-icon: var(--bs-color-text-muted);
+  --bs-date-picker-menu-success: var(--bs-color-state-success);
+  --bs-date-picker-menu-danger: var(--bs-color-state-error);
+  --bs-date-picker-menu-marker: var(--bs-color-state-error);
+  --bs-date-picker-menu-tooltip-background: var(--bs-color-surface-subtle);
+  --bs-date-picker-menu-highlight: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-range-background: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-range-text: var(--bs-color-text-body);
+  --bs-date-picker-menu-range-border: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-scrollbar-track: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-scrollbar-thumb: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-loader: var(--border-width-accent) solid
+    var(--bs-color-brand-primary);
+}

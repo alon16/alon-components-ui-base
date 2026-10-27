@@ -1,0 +1,217 @@
+:root {
+  color-scheme: light;
+
+  /* Paleta privada del tema violeta. Nunca la consumen los componentes. */
+  --bs-palette-plum-950: #2e1065;
+  --bs-palette-plum-900: #3b1580;
+  --bs-palette-violet-700: #6d28d9;
+  --bs-palette-violet-600: #7c3aed;
+  --bs-palette-violet-100: #ede9fe;
+  --bs-palette-purple-800: #5b21b6;
+  --bs-palette-purple-100: #f3e8ff;
+  --bs-palette-amber-100: #fff4e0;
+  --bs-palette-orange-700: #c2410c;
+  --bs-palette-white: #ffffff;
+  --bs-palette-gray-50: #faf9fc;
+  --bs-palette-gray-100: #f4f2f8;
+  --bs-palette-gray-200: #e9e5f0;
+  --bs-palette-gray-300: #d6d0e0;
+  --bs-palette-gray-400: #a29bb0;
+  --bs-palette-gray-500: #6e6780;
+  --bs-palette-gray-700: #3a3448;
+  --bs-palette-gray-800: #2a2535;
+  --bs-palette-red-700: #ae2f2f;
+  --bs-palette-red-600: #c73535;
+  --bs-palette-red-100: #fdecec;
+  --bs-palette-green-700: #157347;
+  --bs-palette-green-100: #e9f7ef;
+  --bs-palette-cream-50: #fff8ef;
+  --bs-palette-teal-700: #14756e;
+
+  --bs-color-brand-primary: var(--bs-palette-violet-600);
+  --bs-color-brand-primary-hover: var(--bs-palette-violet-700);
+  --bs-color-brand-secondary: var(--bs-palette-plum-950);
+  --bs-color-brand-secondary-hover: var(--bs-palette-plum-900);
+  --bs-color-surface-page: var(--bs-palette-white);
+  --bs-color-surface-subtle: var(--bs-palette-gray-50);
+  --bs-color-surface-muted: var(--bs-palette-gray-100);
+  --bs-color-surface-inverse: var(--bs-palette-plum-950);
+  --bs-color-surface-footer: var(--bs-palette-gray-800);
+  --bs-color-surface-highlight: var(--bs-palette-violet-100);
+  --bs-color-text-heading: var(--bs-palette-plum-950);
+  --bs-color-text-body: var(--bs-palette-gray-700);
+  --bs-color-text-muted: var(--bs-palette-gray-500);
+  --bs-color-text-inverse: var(--bs-palette-white);
+  --bs-color-text-inverse-muted: var(--bs-palette-gray-300);
+  --bs-color-text-on-primary: var(--bs-palette-white);
+  --bs-color-border-default: var(--bs-palette-gray-200);
+  --bs-color-border-strong: var(--bs-palette-gray-300);
+  --bs-color-border-inverse: rgb(255 255 255 / 0.14);
+  --bs-color-action-primary: var(--bs-palette-violet-600);
+  --bs-color-action-primary-hover: var(--bs-palette-violet-700);
+  --bs-color-action-secondary: var(--bs-palette-plum-950);
+  --bs-color-action-danger: var(--bs-color-state-error);
+  --bs-color-action-danger-hover: var(--bs-palette-red-700);
+  --bs-color-focus-ring: var(--bs-palette-violet-600);
+  --bs-color-focus-shadow: rgb(124 58 237 / 0.22);
+  --bs-color-state-error: var(--bs-palette-red-600);
+  --bs-color-state-error-surface: var(--bs-palette-red-100);
+  --bs-color-state-warning: var(--bs-palette-orange-700);
+  --bs-color-state-success: var(--bs-palette-green-700);
+  --bs-color-state-success-surface: var(--bs-palette-green-100);
+  --bs-color-status-info-text: var(--bs-palette-teal-700);
+  --bs-color-badge-progress: var(--bs-palette-orange-700);
+  --bs-color-badge-progress-surface: var(--bs-palette-cream-50);
+  --bs-color-badge-violet: var(--bs-palette-purple-800);
+  --bs-color-badge-violet-surface: var(--bs-palette-purple-100);
+  --bs-badge-sm-padding-block: 0.125rem;
+  --bs-badge-sm-padding-inline: var(--space-2);
+  --bs-badge-sm-line-height: 1.4;
+  --bs-badge-md-padding-block: var(--space-1);
+  --bs-badge-md-padding-inline: var(--space-3);
+  --bs-badge-md-line-height: var(--line-height-heading);
+  --bs-badge-fixed-width: 148px;
+  --bs-badge-neutral-text: var(--bs-color-text-muted);
+  --bs-badge-neutral-background: var(--bs-color-surface-muted);
+  --bs-badge-neutral-border: var(--bs-color-border-strong);
+  --bs-badge-info-text: var(--bs-color-status-info-text);
+  --bs-badge-info-background: var(--bs-color-surface-subtle);
+  --bs-badge-info-border: var(--bs-color-status-info-text);
+  --bs-badge-success-text: var(--bs-color-state-success);
+  --bs-badge-success-background: var(--bs-color-state-success-surface);
+  --bs-badge-success-border: var(--bs-color-state-success);
+  --bs-badge-warning-text: var(--bs-color-state-warning);
+  /* El highlight es violeta: las advertencias conservan un fondo ámbar propio. */
+  --bs-badge-warning-background: var(--bs-palette-amber-100);
+  --bs-badge-warning-border: var(--bs-color-state-warning);
+  --bs-badge-error-text: var(--bs-color-state-error);
+  --bs-badge-error-background: var(--bs-color-state-error-surface);
+  --bs-badge-error-border: var(--bs-color-state-error);
+  --bs-badge-critical-text: var(--bs-color-action-danger);
+  --bs-badge-critical-background: var(--bs-color-state-error-surface);
+  --bs-badge-critical-border: var(--bs-color-action-danger);
+  --bs-badge-progress-text: var(--bs-color-badge-progress);
+  --bs-badge-progress-background: var(--bs-color-badge-progress-surface);
+  --bs-badge-progress-border: var(--bs-color-badge-progress);
+  --bs-badge-violet-text: var(--bs-color-badge-violet);
+  --bs-badge-violet-background: var(--bs-color-badge-violet-surface);
+  --bs-badge-violet-border: var(--bs-color-badge-violet);
+  --bs-alert-danger-background: var(--bs-color-state-error-surface);
+  --bs-alert-danger-border: var(--bs-color-state-error);
+  --bs-alert-danger-text: var(--bs-color-state-error);
+  --bs-alert-warning-background: var(--bs-palette-amber-100);
+  --bs-alert-warning-border: var(--bs-color-state-warning);
+  --bs-alert-warning-text: var(--bs-color-state-warning);
+  --bs-alert-info-background: var(--bs-color-surface-subtle);
+  --bs-alert-info-border: var(--bs-color-status-info-text);
+  --bs-alert-info-text: var(--bs-color-status-info-text);
+  --bs-alert-primary-background: var(--bs-color-surface-highlight);
+  --bs-alert-primary-border: var(--bs-color-brand-primary);
+  --bs-alert-primary-text: var(--bs-color-brand-secondary);
+  --bs-alert-secondary-background: var(--bs-color-surface-muted);
+  --bs-alert-secondary-border: var(--bs-color-brand-secondary);
+  --bs-alert-secondary-text: var(--bs-color-brand-secondary);
+  --bs-alert-close-hover-background: var(--bs-color-surface-muted);
+  --bs-form-field-gap: calc(var(--space-2) * 0.75);
+  --bs-form-section-gap: var(--space-3);
+  --bs-form-label-color: var(--bs-color-text-muted);
+  --bs-form-value-color: var(--bs-color-text-heading);
+  --bs-form-label-size: var(--text-label-size);
+  --bs-choice-field-min-height: var(--control-height-sm);
+  --bs-tabs-margin-bottom: var(--space-0);
+  --bs-field-gap: var(--space-2);
+  --bs-field-message-min-height: calc(
+    var(--font-size-xs) * var(--line-height-heading)
+  );
+  --bs-card-background: var(--bs-palette-white);
+  --bs-card-padding-compact: var(--space-4);
+  --bs-table-sort-icon-gap: 8px;
+  --bs-table-edit-row-padding-block: 8px;
+  --bs-table-pagination-gap: 8px;
+  --bs-table-cell-padding-block: 4px;
+  --bs-table-cell-padding-inline: 16px;
+  --bs-table-row-min-height: 40px;
+  --bs-table-selection-cell-padding-inline: 4px;
+  --bs-table-footer-gap: 4px;
+  --bs-table-footer-padding-block: 4px;
+  --bs-table-footer-padding-inline: 16px;
+  --bs-table-summary-gap: 4px;
+  --bs-table-ellipsis-min-width: 4px;
+  --bs-table-control-padding: 0;
+  --bs-table-control-border: 0;
+  --bs-table-summary-margin: 0;
+  --bs-table-border-spacing: 0;
+  --bs-table-last-row-border: 0;
+  --bs-table-cell-leading: var(--line-height-heading);
+  --base-field-gap: var(--bs-field-gap);
+  --base-field-message-min-height: var(--bs-field-message-min-height);
+  --bs-color-surface-inverse-hover: rgb(255 255 255 / 0.06);
+  --bs-control-background: var(--bs-color-surface-subtle);
+  --bs-control-focus-background: var(--bs-color-surface-muted);
+  --bs-overlay-background: var(--bs-palette-white);
+  --bs-control-border: var(--bs-color-border-strong);
+  --bs-control-disabled-background: var(--bs-color-surface-muted);
+  --bs-control-disabled-border: var(--bs-color-border-strong);
+  --bs-control-hover-border: var(--bs-color-text-muted);
+  --bs-control-focus-border: var(--bs-color-brand-primary);
+  --bs-control-focus-shadow: var(--bs-color-focus-shadow);
+  --bs-dialog-backdrop-background: rgb(46 16 101 / 0.62);
+  --bs-loading-overlay-background: color-mix(
+    in srgb,
+    var(--bs-color-surface-page) 72%,
+    transparent
+  );
+  --bs-tooltip-border: color-mix(
+    in srgb,
+    var(--bs-color-text-muted) 20%,
+    var(--bs-color-border-default)
+  );
+  --bs-color-signature-guide: var(--bs-palette-gray-400);
+  --bs-color-signature-ink: var(--bs-palette-gray-800);
+  --bs-signature-canvas-background: var(--bs-color-surface-page);
+  --bs-signature-guide-color: var(--bs-color-signature-guide);
+  --bs-signature-ink-color: var(--bs-color-signature-ink);
+
+  --bs-breadcrumb-gap-block: var(--space-1);
+  --bs-breadcrumb-gap-inline: var(--space-2);
+  --bs-breadcrumb-transition: var(--transition-fast);
+  --bs-breadcrumb-underline-offset: var(--space-1);
+  --bs-breadcrumb-focus-radius: var(--radius-sm);
+  --bs-breadcrumb-focus-width: var(--focus-outline-width);
+  --bs-breadcrumb-focus-offset: var(--focus-outline-offset);
+
+  /* Resultado explícito de los anteriores color-mix() de BaseFieldInfo. */
+  --bs-field-info-hover-background: var(--bs-color-surface-subtle);
+  --bs-field-info-focus-border: var(--bs-color-border-strong);
+  --bs-field-info-focus-shadow: rgb(110 103 128 / 0.18);
+  --bs-field-info-tooltip-border: var(--bs-color-border-default);
+
+  /* Vue Datepicker: el wrapper traduce estos tokens a las variables --dp-*. */
+  --bs-date-picker-menu-background: var(--bs-color-surface-page);
+  --bs-date-picker-menu-text: var(--bs-color-text-body);
+  --bs-date-picker-menu-hover-background: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-hover-text: var(--bs-color-text-heading);
+  --bs-date-picker-menu-hover-icon: var(--bs-color-text-heading);
+  --bs-date-picker-menu-selected-background: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-selected-text: var(--bs-color-text-on-primary);
+  --bs-date-picker-menu-selected-disabled: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-muted-text: var(--bs-color-text-muted);
+  --bs-date-picker-menu-border: var(--bs-color-border-strong);
+  --bs-date-picker-menu-hover-border: var(--bs-color-border-strong);
+  --bs-date-picker-menu-focus-border: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-disabled-background: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-disabled-text: var(--bs-color-text-muted);
+  --bs-date-picker-menu-icon: var(--bs-color-text-muted);
+  --bs-date-picker-menu-success: var(--bs-color-state-success);
+  --bs-date-picker-menu-danger: var(--bs-color-state-error);
+  --bs-date-picker-menu-marker: var(--bs-color-state-error);
+  --bs-date-picker-menu-tooltip-background: var(--bs-color-surface-page);
+  --bs-date-picker-menu-highlight: var(--bs-color-surface-highlight);
+  --bs-date-picker-menu-range-background: var(--bs-color-surface-highlight);
+  --bs-date-picker-menu-range-text: var(--bs-color-text-body);
+  --bs-date-picker-menu-range-border: var(--bs-color-surface-highlight);
+  --bs-date-picker-menu-scrollbar-track: var(--bs-color-surface-muted);
+  --bs-date-picker-menu-scrollbar-thumb: var(--bs-color-brand-primary);
+  --bs-date-picker-menu-loader: var(--border-width-accent) solid
+    var(--bs-color-brand-primary);
+}

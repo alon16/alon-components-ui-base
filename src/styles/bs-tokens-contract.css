@@ -1,0 +1,170 @@
+/*
+ * Contrato público de tema de la biblioteca.
+ *
+ * Los componentes solo consumen propiedades --bs-*. Esta hoja no asigna valores
+ * visuales: cada aplicación debe importar un tema después de los estilos de la
+ * librería. El tema de referencia está en ./themes/violet.css.
+ *
+ * Familias principales:
+ * --bs-color-{brand,action,text,surface,border,state,focus}-*
+ * --bs-shadow-*, --bs-radius-*, --bs-space-*, --bs-font-*, --bs-text-*
+ * --bs-control-*, --bs-switch-*, --bs-signature-*, --bs-tabs-*
+ * --bs-date-picker-menu-* (fondo, texto, hover, selección, borde, foco,
+ * deshabilitado, rango, tooltip, scrollbar y cargador del calendario externo)
+ * --bs-breadcrumb-* (espaciado, transición y foco del breadcrumb)
+ */
+
+:root {
+  --bs-breadcrumb-gap-block: var(--space-1);
+  --bs-breadcrumb-gap-inline: var(--space-2);
+  --bs-breadcrumb-transition: var(--transition-fast);
+  --bs-breadcrumb-underline-offset: var(--space-1);
+  --bs-breadcrumb-focus-radius: var(--radius-sm);
+  --bs-breadcrumb-focus-width: var(--focus-outline-width);
+  --bs-breadcrumb-focus-offset: var(--focus-outline-offset);
+
+  /* BaseAlert: fondos, bordes y texto semánticos por tono. */
+  --bs-alert-danger-background: var(--bs-color-state-error-surface);
+  --bs-alert-danger-border: var(--bs-color-state-error);
+  --bs-alert-danger-text: var(--bs-color-state-error);
+  --bs-alert-warning-background: var(--bs-color-surface-highlight);
+  --bs-alert-warning-border: var(--bs-color-state-warning);
+  --bs-alert-warning-text: var(--bs-color-state-warning);
+  --bs-alert-info-background: var(--bs-color-surface-subtle);
+  --bs-alert-info-border: var(--bs-color-status-info-text);
+  --bs-alert-info-text: var(--bs-color-status-info-text);
+  --bs-alert-primary-background: var(--bs-color-surface-highlight);
+  --bs-alert-primary-border: var(--bs-color-brand-primary);
+  --bs-alert-primary-text: var(--bs-color-brand-secondary);
+  --bs-alert-secondary-background: var(--bs-color-surface-muted);
+  --bs-alert-secondary-border: var(--bs-color-brand-secondary);
+  --bs-alert-secondary-text: var(--bs-color-brand-secondary);
+  --bs-alert-close-hover-background: var(--bs-color-surface-muted);
+
+  /* Layout común de formularios. */
+  --bs-form-field-gap: calc(var(--space-2) * 0.75);
+  --bs-form-section-gap: var(--space-3);
+  --bs-form-label-color: var(--bs-color-text-muted);
+  --bs-form-value-color: var(--bs-color-text-heading);
+  --bs-form-label-size: var(--text-label-size);
+  --bs-choice-field-min-height: var(--control-height-sm);
+  /* Controles de formulario: fondo, borde y estado deshabilitado compartidos. */
+  --bs-control-background: var(--bs-color-surface-page);
+  --bs-control-focus-background: var(--bs-color-surface-muted);
+  --bs-overlay-background: var(--bs-color-surface-page);
+  --bs-control-border: var(--bs-color-border-strong);
+  --bs-control-disabled-background: var(--bs-color-surface-muted);
+  --bs-control-disabled-border: var(--bs-color-border-strong);
+  --bs-control-hover-border: var(--bs-color-text-muted);
+  --bs-control-focus-border: var(--bs-color-brand-primary);
+  --bs-control-focus-shadow: var(--bs-color-focus-shadow);
+  --bs-dialog-backdrop-background: var(--bs-color-surface-inverse);
+  --bs-loading-overlay-background: var(--bs-color-surface-page);
+  --bs-tooltip-border: var(--bs-color-border-default);
+  --bs-tabs-margin-bottom: var(--space-0);
+  --bs-field-gap: var(--space-2);
+  --bs-field-message-min-height: calc(
+    var(--font-size-xs) * var(--line-height-heading)
+  );
+
+  /* BaseCard. */
+  --bs-card-background: var(--bs-color-surface-page);
+  --bs-card-padding-compact: var(--space-4);
+
+  /* BaseTable. */
+  --bs-table-sort-icon-gap: 8px;
+  --bs-table-edit-row-padding-block: 8px;
+  --bs-table-pagination-gap: 8px;
+  --bs-table-cell-padding-block: 4px;
+  --bs-table-cell-padding-inline: 16px;
+  --bs-table-row-min-height: 40px;
+  --bs-table-selection-cell-padding-inline: 4px;
+  --bs-table-footer-gap: 4px;
+  --bs-table-footer-padding-block: 4px;
+  --bs-table-footer-padding-inline: 16px;
+  --bs-table-summary-gap: 4px;
+  --bs-table-ellipsis-min-width: 4px;
+  --bs-table-control-padding: 0;
+  --bs-table-control-border: 0;
+  --bs-table-summary-margin: 0;
+  --bs-table-border-spacing: 0;
+  --bs-table-last-row-border: 0;
+  --bs-table-cell-leading: var(--line-height-heading);
+
+  /* BaseBadge. */
+  --bs-badge-sm-padding-block: 0.125rem;
+  --bs-badge-sm-padding-inline: var(--space-2);
+  --bs-badge-sm-line-height: 1.4;
+  --bs-badge-md-padding-block: var(--space-1);
+  --bs-badge-md-padding-inline: var(--space-3);
+  --bs-badge-md-line-height: var(--line-height-heading);
+  --bs-badge-fixed-width: 148px;
+  --bs-color-badge-progress: var(--bs-color-state-warning);
+  --bs-color-badge-progress-surface: var(--bs-color-surface-highlight);
+  --bs-color-badge-violet: var(--bs-color-brand-secondary);
+  --bs-color-badge-violet-surface: var(--bs-color-surface-muted);
+  --bs-badge-neutral-text: var(--bs-color-text-muted);
+  --bs-badge-neutral-background: var(--bs-color-surface-muted);
+  --bs-badge-neutral-border: var(--bs-color-border-strong);
+  --bs-badge-info-text: var(--bs-color-status-info-text);
+  --bs-badge-info-background: var(--bs-color-surface-subtle);
+  --bs-badge-info-border: var(--bs-color-status-info-text);
+  --bs-badge-success-text: var(--bs-color-state-success);
+  --bs-badge-success-background: var(--bs-color-state-success-surface);
+  --bs-badge-success-border: var(--bs-color-state-success);
+  --bs-badge-warning-text: var(--bs-color-state-warning);
+  --bs-badge-warning-background: var(--bs-color-surface-highlight);
+  --bs-badge-warning-border: var(--bs-color-state-warning);
+  --bs-badge-error-text: var(--bs-color-state-error);
+  --bs-badge-error-background: var(--bs-color-state-error-surface);
+  --bs-badge-error-border: var(--bs-color-state-error);
+  --bs-badge-critical-text: var(--bs-color-action-danger);
+  --bs-badge-critical-background: var(--bs-color-state-error-surface);
+  --bs-badge-critical-border: var(--bs-color-action-danger);
+  --bs-badge-progress-text: var(--bs-color-badge-progress);
+  --bs-badge-progress-background: var(--bs-color-badge-progress-surface);
+  --bs-badge-progress-border: var(--bs-color-badge-progress);
+  --bs-badge-violet-text: var(--bs-color-badge-violet);
+  --bs-badge-violet-background: var(--bs-color-badge-violet-surface);
+  --bs-badge-violet-border: var(--bs-color-badge-violet);
+
+  /* Alias conservados para consumidores existentes. */
+  --base-field-gap: var(--bs-field-gap);
+  --base-field-message-min-height: var(--bs-field-message-min-height);
+
+  /* Puente de transición: el código existente puede seguir usando los nombres
+     anteriores mientras los valores públicos se definen exclusivamente en --bs-*. */
+  --color-brand-primary: var(--bs-color-brand-primary);
+  --color-brand-primary-hover: var(--bs-color-brand-primary-hover);
+  --color-brand-secondary: var(--bs-color-brand-secondary);
+  --color-brand-secondary-hover: var(--bs-color-brand-secondary-hover);
+  --color-surface-page: var(--bs-color-surface-page);
+  --color-surface-subtle: var(--bs-color-surface-subtle);
+  --color-surface-muted: var(--bs-color-surface-muted);
+  --color-surface-inverse: var(--bs-color-surface-inverse);
+  --color-surface-footer: var(--bs-color-surface-footer);
+  --color-surface-highlight: var(--bs-color-surface-highlight);
+  --color-surface-inverse-hover: var(--bs-color-surface-inverse-hover);
+  --color-text-heading: var(--bs-color-text-heading);
+  --color-text-body: var(--bs-color-text-body);
+  --color-text-muted: var(--bs-color-text-muted);
+  --color-text-inverse: var(--bs-color-text-inverse);
+  --color-text-inverse-muted: var(--bs-color-text-inverse-muted);
+  --color-text-on-primary: var(--bs-color-text-on-primary);
+  --color-border-default: var(--bs-color-border-default);
+  --color-border-strong: var(--bs-color-border-strong);
+  --color-border-inverse: var(--bs-color-border-inverse);
+  --color-action-primary: var(--bs-color-action-primary);
+  --color-action-primary-hover: var(--bs-color-action-primary-hover);
+  --color-action-secondary: var(--bs-color-action-secondary);
+  --color-action-danger: var(--bs-color-action-danger);
+  --color-action-danger-hover: var(--bs-color-action-danger-hover);
+  --color-focus-ring: var(--bs-color-focus-ring);
+  --color-focus-shadow: var(--bs-color-focus-shadow);
+  --color-state-error: var(--bs-color-state-error);
+  --color-state-error-surface: var(--bs-color-state-error-surface);
+  --color-state-warning: var(--bs-color-state-warning);
+  --color-state-success: var(--bs-color-state-success);
+  --color-state-success-surface: var(--bs-color-state-success-surface);
+  --color-status-info-text: var(--bs-color-status-info-text);
+}
