@@ -156,10 +156,10 @@ defineExpose({ focusFirstInvalid });
   max-height: calc(100vh - var(--space-8));
   padding: var(--space-0);
   overflow: auto;
-  border: var(--border-width-thin) solid var(--bs-color-border-default);
+  border: var(--border-width-thin) solid var(--ui-color-border-default);
   border-radius: var(--radius-xl);
-  color: var(--bs-color-text-body);
-  background: var(--bs-color-surface-page);
+  color: var(--ui-color-text-body);
+  background: var(--ui-color-surface-page);
   box-shadow: var(--shadow-lg);
 }
 
@@ -170,7 +170,7 @@ defineExpose({ focusFirstInvalid });
   --base-dialog-width: var(--container-sm);
 }
 .base-dialog::backdrop {
-  background: var(--bs-dialog-backdrop-background);
+  background: var(--ui-dialog-backdrop-background);
 }
 .base-dialog__surface {
   display: grid;
@@ -198,14 +198,14 @@ defineExpose({ focusFirstInvalid });
   align-items: center;
   justify-content: center;
   padding: var(--space-0);
-  border: var(--border-width-thin) solid var(--bs-color-border-default);
+  border: var(--border-width-thin) solid var(--ui-color-border-default);
   border-radius: var(--radius-md);
-  color: var(--bs-color-text-heading);
-  background: var(--bs-color-surface-page);
+  color: var(--ui-color-text-heading);
+  background: var(--ui-color-surface-page);
   cursor: pointer;
 }
 .base-dialog__close:hover:not(:disabled) {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 .base-dialog__close:disabled {
   cursor: not-allowed;

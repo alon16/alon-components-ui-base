@@ -171,10 +171,10 @@ onBeforeUnmount(clearTimer);
 
 <style scoped>
 .base-toast {
-  --toast-background: var(--bs-alert-info-background);
-  --toast-border: var(--bs-alert-info-border);
-  --toast-accent: var(--bs-alert-info-border);
-  --toast-text: var(--bs-alert-info-text);
+  --toast-background: var(--ui-alert-info-background);
+  --toast-border: var(--ui-alert-info-border);
+  --toast-accent: var(--ui-alert-info-border);
+  --toast-text: var(--ui-alert-info-text);
 
   position: fixed;
   z-index: var(--layer-toast);
@@ -186,36 +186,36 @@ onBeforeUnmount(clearTimer);
   border: var(--border-width-thin) solid var(--toast-border);
   border-radius: var(--radius-md);
   color: var(--toast-text);
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
   opacity: 1;
   box-shadow: var(--shadow-md);
 }
 
 .base-toast--success {
-  --toast-background: var(--bs-color-state-success-surface);
-  --toast-border: var(--bs-color-state-success);
-  --toast-accent: var(--bs-color-state-success);
-  --toast-text: var(--bs-color-state-success);
+  --toast-background: var(--ui-color-state-success-surface);
+  --toast-border: var(--ui-color-state-success);
+  --toast-accent: var(--ui-color-state-success);
+  --toast-text: var(--ui-color-state-success);
 }
 
 .base-toast--info {
-  --toast-background: var(--bs-alert-info-background);
-  --toast-border: var(--bs-alert-info-border);
-  --toast-accent: var(--bs-alert-info-border);
+  --toast-background: var(--ui-alert-info-background);
+  --toast-border: var(--ui-alert-info-border);
+  --toast-accent: var(--ui-alert-info-border);
 }
 
 .base-toast--warning {
-  --toast-background: var(--bs-alert-warning-background);
-  --toast-border: var(--bs-alert-warning-border);
-  --toast-accent: var(--bs-alert-warning-border);
-  --toast-text: var(--bs-alert-warning-text);
+  --toast-background: var(--ui-alert-warning-background);
+  --toast-border: var(--ui-alert-warning-border);
+  --toast-accent: var(--ui-alert-warning-border);
+  --toast-text: var(--ui-alert-warning-text);
 }
 
 .base-toast--danger {
-  --toast-background: var(--bs-alert-danger-background);
-  --toast-border: var(--bs-alert-danger-border);
-  --toast-accent: var(--bs-alert-danger-border);
-  --toast-text: var(--bs-alert-danger-text);
+  --toast-background: var(--ui-alert-danger-background);
+  --toast-border: var(--ui-alert-danger-border);
+  --toast-accent: var(--ui-alert-danger-border);
+  --toast-text: var(--ui-alert-danger-text);
 }
 
 .base-toast--top-right {
@@ -298,11 +298,11 @@ onBeforeUnmount(clearTimer);
 }
 
 .base-toast__close:hover {
-  background: var(--bs-alert-close-hover-background);
+  background: var(--ui-alert-close-hover-background);
 }
 
 .base-toast__close:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 

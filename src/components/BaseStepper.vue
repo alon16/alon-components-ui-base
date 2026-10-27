@@ -188,12 +188,12 @@ function descriptionAriaLabel(step: BaseStepperStep) {
 <style scoped>
 .base-stepper {
   width: 100%;
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
 }
 
 .base-stepper__description {
   margin: var(--space-0) var(--space-0) var(--space-4);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
 }
@@ -218,9 +218,9 @@ function descriptionAriaLabel(step: BaseStepperStep) {
 }
 
 .base-stepper__item {
-  --base-stepper-state-color: var(--bs-color-text-muted);
-  --base-stepper-state-border: var(--bs-color-border-default);
-  --base-stepper-state-surface: var(--bs-color-surface-page);
+  --base-stepper-state-color: var(--ui-color-text-muted);
+  --base-stepper-state-border: var(--ui-color-border-default);
+  --base-stepper-state-surface: var(--ui-color-surface-page);
 
   position: relative;
   min-width: 0;
@@ -228,15 +228,15 @@ function descriptionAriaLabel(step: BaseStepperStep) {
 }
 
 .base-stepper__item--current {
-  --base-stepper-state-color: var(--bs-color-text-heading);
-  --base-stepper-state-border: var(--bs-color-brand-primary);
-  --base-stepper-state-surface: var(--bs-color-brand-primary);
+  --base-stepper-state-color: var(--ui-color-text-heading);
+  --base-stepper-state-border: var(--ui-color-brand-primary);
+  --base-stepper-state-surface: var(--ui-color-brand-primary);
 }
 
 .base-stepper__item--completed {
-  --base-stepper-state-color: var(--bs-color-state-success);
-  --base-stepper-state-border: var(--bs-color-state-success);
-  --base-stepper-state-surface: var(--bs-color-state-success-surface);
+  --base-stepper-state-color: var(--ui-color-state-success);
+  --base-stepper-state-border: var(--ui-color-state-success);
+  --base-stepper-state-surface: var(--ui-color-state-success-surface);
 }
 
 .base-stepper__item--disabled {
@@ -267,17 +267,17 @@ button.base-stepper__step:not(:disabled):hover .base-stepper__indicator {
 .base-stepper__item--pending
   button.base-stepper__step:not(:disabled):hover
   .base-stepper__indicator {
-  border-color: var(--bs-color-border-strong);
+  border-color: var(--ui-color-border-strong);
 }
 
 .base-stepper__item--current
   button.base-stepper__step:not(:disabled):hover
   .base-stepper__indicator {
-  background: var(--bs-color-brand-primary-hover);
+  background: var(--ui-color-brand-primary-hover);
 }
 
 button.base-stepper__step:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
   border-radius: var(--radius-sm);
 }
@@ -303,7 +303,7 @@ button.base-stepper__step:focus-visible {
 }
 
 .base-stepper__item--current .base-stepper__indicator {
-  color: var(--bs-color-text-on-primary);
+  color: var(--ui-color-text-on-primary);
 }
 
 .base-stepper__content {
@@ -325,7 +325,7 @@ button.base-stepper__step:focus-visible {
 }
 
 .base-stepper__step-description {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
@@ -353,12 +353,12 @@ button.base-stepper__step:focus-visible {
   left: calc(50% + var(--space-5));
   width: calc(100% - var(--space-10));
   height: var(--border-width-accent);
-  background: var(--bs-color-border-default);
+  background: var(--ui-color-border-default);
   content: "";
 }
 
 .base-stepper--circles .base-stepper__item--completed:not(:last-child)::after {
-  background: var(--bs-color-state-success);
+  background: var(--ui-color-state-success);
 }
 
 .base-stepper--circles .base-stepper__step {
@@ -425,11 +425,11 @@ button.base-stepper__step:focus-visible {
   width: var(--space-6);
   height: var(--space-6);
   flex-basis: var(--space-6);
-  background: var(--bs-color-surface-page);
+  background: var(--ui-color-surface-page);
 }
 
 .base-stepper--pills .base-stepper__item--current .base-stepper__indicator {
-  background: var(--bs-color-brand-primary);
+  background: var(--ui-color-brand-primary);
 }
 
 .base-stepper--pills .base-stepper__info {
@@ -461,12 +461,12 @@ button.base-stepper__step:focus-visible {
   bottom: var(--space-0);
   left: calc(var(--space-8) / 2 - var(--border-width-thin));
   width: var(--border-width-accent);
-  background: var(--bs-color-border-default);
+  background: var(--ui-color-border-default);
   content: "";
 }
 
 .base-stepper--vertical .base-stepper__item--completed:not(:last-child)::after {
-  background: var(--bs-color-state-success);
+  background: var(--ui-color-state-success);
 }
 
 .base-stepper--vertical .base-stepper__step {

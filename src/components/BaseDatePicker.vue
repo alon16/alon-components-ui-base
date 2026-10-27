@@ -244,11 +244,11 @@ defineExpose({
 .base-date-picker {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--space-2));
+  gap: var(--ui-field-gap, var(--space-2));
 }
 .base-date-picker__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -261,7 +261,7 @@ defineExpose({
   flex-wrap: wrap;
 }
 .base-date-picker--inverse .base-date-picker__label {
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
 }
 .base-date-picker__control {
   position: relative;
@@ -273,10 +273,10 @@ defineExpose({
 .base-date-picker__input {
   width: 100%;
   min-width: var(--space-0);
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-form-value-color);
-  background: var(--bs-control-background);
+  color: var(--ui-form-value-color);
+  background: var(--ui-control-background);
   font: inherit;
   transition:
     border-color var(--transition-fast),
@@ -284,21 +284,21 @@ defineExpose({
     background-color var(--transition-fast);
 }
 .base-date-picker__input::placeholder {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 .base-date-picker__input:hover:not(:disabled):not(:read-only) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-date-picker__input:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-date-picker__input:disabled {
   cursor: not-allowed;
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 .base-date-picker__input:read-only {
   cursor: default;
@@ -332,7 +332,7 @@ defineExpose({
   z-index: 1;
   top: 50%;
   left: var(--space-3);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -344,21 +344,21 @@ defineExpose({
   padding: var(--space-0);
   border: 0;
   border-radius: var(--radius-sm);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   background: transparent;
   cursor: pointer;
 }
 .base-date-picker__clear:hover {
-  color: var(--bs-color-text-heading);
-  background: var(--bs-color-surface-muted);
+  color: var(--ui-color-text-heading);
+  background: var(--ui-color-surface-muted);
 }
 .base-date-picker__clear:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 .base-date-picker__message {
-  min-height: var(--bs-field-message-min-height);
-  color: var(--bs-color-text-muted);
+  min-height: var(--ui-field-message-min-height);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -367,53 +367,53 @@ defineExpose({
   visibility: visible;
 }
 .base-date-picker--error .base-date-picker__input {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-control-background);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-control-background);
   box-shadow: none;
 }
 .base-date-picker--success .base-date-picker__input {
-  border-color: var(--bs-color-state-success);
-  background: var(--bs-color-state-success-surface);
+  border-color: var(--ui-color-state-success);
+  background: var(--ui-color-state-success-surface);
 }
 .base-date-picker--error .base-date-picker__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 .base-date-picker--success .base-date-picker__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 .base-date-picker__arrow-up {
   transform: rotate(180deg);
 }
 .base-date-picker__menu {
-  --dp-background-color: var(--bs-date-picker-menu-background);
-  --dp-text-color: var(--bs-date-picker-menu-text);
-  --dp-hover-color: var(--bs-date-picker-menu-hover-background);
-  --dp-hover-text-color: var(--bs-date-picker-menu-hover-text);
-  --dp-hover-icon-color: var(--bs-date-picker-menu-hover-icon);
-  --dp-primary-color: var(--bs-date-picker-menu-selected-background);
-  --dp-primary-text-color: var(--bs-date-picker-menu-selected-text);
-  --dp-primary-disabled-color: var(--bs-date-picker-menu-selected-disabled);
-  --dp-secondary-color: var(--bs-date-picker-menu-muted-text);
-  --dp-border-color: var(--bs-date-picker-menu-border);
-  --dp-menu-border-color: var(--bs-date-picker-menu-border);
-  --dp-border-color-hover: var(--bs-date-picker-menu-hover-border);
-  --dp-border-color-focus: var(--bs-date-picker-menu-focus-border);
-  --dp-disabled-color: var(--bs-date-picker-menu-disabled-background);
-  --dp-disabled-color-text: var(--bs-date-picker-menu-disabled-text);
-  --dp-icon-color: var(--bs-date-picker-menu-icon);
-  --dp-success-color: var(--bs-date-picker-menu-success);
-  --dp-danger-color: var(--bs-date-picker-menu-danger);
-  --dp-marker-color: var(--bs-date-picker-menu-marker);
-  --dp-tooltip-color: var(--bs-date-picker-menu-tooltip-background);
-  --dp-highlight-color: var(--bs-date-picker-menu-highlight);
+  --dp-background-color: var(--ui-date-picker-menu-background);
+  --dp-text-color: var(--ui-date-picker-menu-text);
+  --dp-hover-color: var(--ui-date-picker-menu-hover-background);
+  --dp-hover-text-color: var(--ui-date-picker-menu-hover-text);
+  --dp-hover-icon-color: var(--ui-date-picker-menu-hover-icon);
+  --dp-primary-color: var(--ui-date-picker-menu-selected-background);
+  --dp-primary-text-color: var(--ui-date-picker-menu-selected-text);
+  --dp-primary-disabled-color: var(--ui-date-picker-menu-selected-disabled);
+  --dp-secondary-color: var(--ui-date-picker-menu-muted-text);
+  --dp-border-color: var(--ui-date-picker-menu-border);
+  --dp-menu-border-color: var(--ui-date-picker-menu-border);
+  --dp-border-color-hover: var(--ui-date-picker-menu-hover-border);
+  --dp-border-color-focus: var(--ui-date-picker-menu-focus-border);
+  --dp-disabled-color: var(--ui-date-picker-menu-disabled-background);
+  --dp-disabled-color-text: var(--ui-date-picker-menu-disabled-text);
+  --dp-icon-color: var(--ui-date-picker-menu-icon);
+  --dp-success-color: var(--ui-date-picker-menu-success);
+  --dp-danger-color: var(--ui-date-picker-menu-danger);
+  --dp-marker-color: var(--ui-date-picker-menu-marker);
+  --dp-tooltip-color: var(--ui-date-picker-menu-tooltip-background);
+  --dp-highlight-color: var(--ui-date-picker-menu-highlight);
   --dp-range-between-dates-background-color: var(
-    --bs-date-picker-menu-range-background
+    --ui-date-picker-menu-range-background
   );
-  --dp-range-between-dates-text-color: var(--bs-date-picker-menu-range-text);
-  --dp-range-between-border-color: var(--bs-date-picker-menu-range-border);
-  --dp-scroll-bar-background: var(--bs-date-picker-menu-scrollbar-track);
-  --dp-scroll-bar-color: var(--bs-date-picker-menu-scrollbar-thumb);
-  --dp-loader: var(--bs-date-picker-menu-loader);
+  --dp-range-between-dates-text-color: var(--ui-date-picker-menu-range-text);
+  --dp-range-between-border-color: var(--ui-date-picker-menu-range-border);
+  --dp-scroll-bar-background: var(--ui-date-picker-menu-scrollbar-track);
+  --dp-scroll-bar-color: var(--ui-date-picker-menu-scrollbar-thumb);
+  --dp-loader: var(--ui-date-picker-menu-loader);
   --dp-border-radius: var(--radius-md);
   --dp-font-family: var(--font-family-base);
   --dp-font-size: var(--font-size-sm);
@@ -426,6 +426,6 @@ defineExpose({
   box-shadow: var(--shadow-md);
 }
 .base-date-picker__menu .dp__today {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
 }
 </style>

@@ -231,7 +231,7 @@ defineExpose({
 .base-field {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 
 .base-field--read {
@@ -239,8 +239,8 @@ defineExpose({
 }
 
 .base-field__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -255,7 +255,7 @@ defineExpose({
 }
 
 .base-field--inverse .base-field__label {
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
 }
 
 .base-field__control {
@@ -268,7 +268,7 @@ defineExpose({
   top: 50%;
   left: var(--space-3);
   display: inline-flex;
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -285,10 +285,10 @@ defineExpose({
   width: 100%;
   min-width: var(--space-0);
   box-sizing: border-box;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-form-value-color);
-  background: var(--bs-control-background);
+  color: var(--ui-form-value-color);
+  background: var(--ui-control-background);
   font: inherit;
   transition:
     border-color var(--transition-fast),
@@ -301,7 +301,7 @@ defineExpose({
   min-height: var(--control-height-sm);
   padding: var(--space-0);
   overflow-wrap: anywhere;
-  color: var(--bs-form-value-color);
+  color: var(--ui-form-value-color);
 }
 
 .base-field__readonly-value.base-text--md {
@@ -313,24 +313,24 @@ defineExpose({
 }
 
 .base-field__input::placeholder {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 
 .base-field__input:hover:not(:disabled):not(:focus) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 
 .base-field__input:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 
 .base-field__input:disabled {
   cursor: not-allowed;
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 
 .base-field__input--sm {
@@ -355,7 +355,7 @@ defineExpose({
   position: absolute;
   top: 50%;
   right: var(--space-3);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   transform: translateY(-50%);
   pointer-events: none;
@@ -373,7 +373,7 @@ defineExpose({
   padding: var(--space-0);
   border: var(--space-0);
   border-radius: var(--radius-sm);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   background: transparent;
   cursor: pointer;
   transform: translateY(-50%);
@@ -383,12 +383,12 @@ defineExpose({
 }
 
 .base-field__password-toggle:hover:not(:disabled) {
-  color: var(--bs-color-text-heading);
-  background: var(--bs-color-surface-muted);
+  color: var(--ui-color-text-heading);
+  background: var(--ui-color-surface-muted);
 }
 
 .base-field__password-toggle:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
@@ -414,26 +414,26 @@ defineExpose({
 }
 
 .base-field--error .base-field__input {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-control-background);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-control-background);
   box-shadow: none;
 }
 
 .base-field--success .base-field__input {
-  border-color: var(--bs-color-state-success);
-  background: var(--bs-color-state-success-surface);
+  border-color: var(--ui-color-state-success);
+  background: var(--ui-color-state-success-surface);
 }
 
 .base-field__message {
   margin-top: calc(var(--space-2) * -0.5);
   min-height: var(
-    --bs-field-message-min-height,
+    --ui-field-message-min-height,
     var(
       --base-field-message-min-height,
       calc(var(--font-size-xs) * var(--line-height-heading))
     )
   );
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -445,16 +445,16 @@ defineExpose({
 
 .base-field__character-count {
   justify-self: end;
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
 }
 
 .base-field--error .base-field__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 
 .base-field--success .base-field__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 </style>

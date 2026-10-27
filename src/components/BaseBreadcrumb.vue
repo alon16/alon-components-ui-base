@@ -85,7 +85,7 @@ const props = defineProps({
   min-width: 0;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--bs-breadcrumb-gap-block) var(--bs-breadcrumb-gap-inline);
+  gap: var(--ui-breadcrumb-gap-block) var(--ui-breadcrumb-gap-inline);
   padding: 0;
   margin: 0;
   list-style: none;
@@ -95,27 +95,27 @@ const props = defineProps({
   display: inline-flex;
   min-width: 0;
   align-items: baseline;
-  gap: var(--bs-breadcrumb-gap-inline);
+  gap: var(--ui-breadcrumb-gap-inline);
 }
 
 .base-breadcrumb__link {
   min-width: 0;
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--bs-breadcrumb-transition);
+  transition: color var(--ui-breadcrumb-transition);
 }
 
 .base-breadcrumb__link:hover {
-  color: var(--bs-color-brand-primary-hover);
+  color: var(--ui-color-brand-primary-hover);
   text-decoration: underline;
-  text-underline-offset: var(--bs-breadcrumb-underline-offset);
+  text-underline-offset: var(--ui-breadcrumb-underline-offset);
 }
 
 .base-breadcrumb__link:focus-visible {
-  border-radius: var(--bs-breadcrumb-focus-radius);
-  outline: var(--bs-breadcrumb-focus-width) solid var(--bs-color-focus-ring);
-  outline-offset: var(--bs-breadcrumb-focus-offset);
+  border-radius: var(--ui-breadcrumb-focus-radius);
+  outline: var(--ui-breadcrumb-focus-width) solid var(--ui-color-focus-ring);
+  outline-offset: var(--ui-breadcrumb-focus-offset);
 }
 
 .base-breadcrumb__current,

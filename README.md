@@ -9,7 +9,7 @@ eventos. Los proyectos JavaScript pueden consumirlo sin configuración adicional
 ## Contenido
 
 - Componentes de interfaz, formularios, selección, firma y fecha.
-- Contrato de tokens CSS `--bs-*` y tema violeta de referencia.
+- Contrato de tokens CSS `--ui-*` y tema violeta de referencia.
 - Soporte de accesibilidad, teclado y textos internos configurables.
 - `BaseDropdownMenu` y la directiva reutilizable `v-tooltip`.
 
@@ -18,7 +18,7 @@ eventos. Los proyectos JavaScript pueden consumirlo sin configuración adicional
 > **Importante:** importa siempre `@alon16/components-ui-base/styles.css`. Registrar o importar un
 > componente no carga sus estilos automáticamente; sin esta hoja, los controles usarán la
 > apariencia nativa del navegador. Carga primero los estilos de la biblioteca y después el tema
-> del portal para que este pueda definir los tokens `--bs-*`.
+> del portal para que este pueda definir los tokens `--ui-*`.
 
 ```bash
 pnpm add @alon16/components-ui-base

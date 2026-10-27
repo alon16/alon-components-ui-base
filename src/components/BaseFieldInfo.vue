@@ -45,7 +45,7 @@ const infoType = computed(() => props.type || "default");
 
 <style scoped>
 .base-field-info {
-  --field-info-color: var(--bs-color-text-muted);
+  --field-info-color: var(--ui-color-text-muted);
 
   position: relative;
   display: inline-flex;
@@ -55,19 +55,19 @@ const infoType = computed(() => props.type || "default");
 }
 
 .base-field-info--primary {
-  --field-info-color: var(--bs-color-brand-primary);
+  --field-info-color: var(--ui-color-brand-primary);
 }
 
 .base-field-info--secondary {
-  --field-info-color: var(--bs-color-brand-secondary);
+  --field-info-color: var(--ui-color-brand-secondary);
 }
 
 .base-field-info--success {
-  --field-info-color: var(--bs-color-state-success);
+  --field-info-color: var(--ui-color-state-success);
 }
 
 .base-field-info--danger {
-  --field-info-color: var(--bs-color-state-error);
+  --field-info-color: var(--ui-color-state-error);
 }
 
 .base-field-info__trigger {
@@ -97,14 +97,14 @@ const infoType = computed(() => props.type || "default");
 }
 
 .base-field-info__trigger:hover {
-  background: var(--bs-field-info-hover-background);
+  background: var(--ui-field-info-hover-background);
 }
 
 .base-field-info__trigger:focus-visible {
   outline: none;
-  border-color: var(--bs-field-info-focus-border);
+  border-color: var(--ui-field-info-focus-border);
   box-shadow: 0 0 0 var(--focus-outline-offset)
-    var(--bs-field-info-focus-shadow);
+    var(--ui-field-info-focus-shadow);
 }
 
 .base-field-info__tooltip {
@@ -116,11 +116,11 @@ const infoType = computed(() => props.type || "default");
   min-width: 12rem;
   max-width: 16rem;
   padding: var(--space-2) var(--space-3);
-  border: var(--border-width-thin) solid var(--bs-field-info-tooltip-border);
+  border: var(--border-width-thin) solid var(--ui-field-info-tooltip-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  color: var(--bs-color-text-body);
-  background: var(--bs-color-surface-page);
+  color: var(--ui-color-text-body);
+  background: var(--ui-color-surface-page);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
@@ -143,11 +143,11 @@ const infoType = computed(() => props.type || "default");
   left: 50%;
   width: var(--space-2);
   height: var(--space-2);
-  background: var(--bs-color-surface-page);
+  background: var(--ui-color-surface-page);
   border-right: var(--border-width-thin) solid
-    var(--bs-field-info-tooltip-border);
+    var(--ui-field-info-tooltip-border);
   border-bottom: var(--border-width-thin) solid
-    var(--bs-field-info-tooltip-border);
+    var(--ui-field-info-tooltip-border);
   transform: translate(-50%, -50%) rotate(45deg);
 }
 

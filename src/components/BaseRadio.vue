@@ -58,14 +58,14 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
   display: grid;
   min-height: var(--base-choice-field-min-height);
   min-width: 0;
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
-  color: var(--bs-color-text-body);
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
+  color: var(--ui-color-text-body);
   cursor: pointer;
 }
 
 .base-radio__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -114,9 +114,9 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
   flex: 0 0 var(--base-radio-control-size);
   align-items: center;
   justify-content: center;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-round);
-  background: var(--bs-control-background);
+  background: var(--ui-control-background);
   transition:
     border-color var(--transition-fast),
     background-color var(--transition-fast);
@@ -126,7 +126,7 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
   width: var(--base-radio-dot-size);
   height: var(--base-radio-dot-size);
   border-radius: var(--radius-round);
-  background: var(--bs-color-brand-primary);
+  background: var(--ui-color-brand-primary);
   content: "";
   opacity: 0;
   transform: scale(0.5);
@@ -148,11 +148,11 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
 }
 
 .base-radio:hover:not(.base-radio--disabled) .base-radio__control {
-  border-color: var(--bs-color-text-heading);
+  border-color: var(--ui-color-text-heading);
 }
 
 .base-radio__input:checked + .base-radio__control {
-  border-color: var(--bs-color-brand-secondary);
+  border-color: var(--ui-color-brand-secondary);
 }
 
 .base-radio__input:checked + .base-radio__control::after {
@@ -161,7 +161,7 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
 }
 
 .base-radio__input:focus-visible + .base-radio__control {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
@@ -170,7 +170,7 @@ const model = defineModel({ type: [String, Number, Boolean], default: "" });
   opacity: var(--opacity-disabled);
 }
 .base-radio--disabled .base-radio__control {
-  border-color: var(--bs-control-disabled-border);
-  background: var(--bs-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
+  background: var(--ui-control-disabled-background);
 }
 </style>

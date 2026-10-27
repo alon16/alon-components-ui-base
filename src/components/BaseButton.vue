@@ -103,90 +103,90 @@ const classes = computed(() => [
 }
 
 .base-button--primary {
-  --base-button-focus-color: var(--bs-color-action-primary);
+  --base-button-focus-color: var(--ui-color-action-primary);
 
-  color: var(--bs-color-text-on-primary);
-  background: var(--bs-color-action-primary);
+  color: var(--ui-color-text-on-primary);
+  background: var(--ui-color-action-primary);
   box-shadow: var(--shadow-sm);
 }
 
 .base-button--primary:hover:not(:disabled) {
-  background: var(--bs-color-action-primary-hover);
+  background: var(--ui-color-action-primary-hover);
   box-shadow: var(--shadow-md);
 }
 
 .base-button--secondary {
-  --base-button-focus-color: var(--bs-color-action-secondary);
+  --base-button-focus-color: var(--ui-color-action-secondary);
 
-  color: var(--bs-color-text-inverse);
-  background: var(--bs-color-action-secondary);
+  color: var(--ui-color-text-inverse);
+  background: var(--ui-color-action-secondary);
 }
 
 .base-button--secondary:hover:not(:disabled) {
-  background: var(--bs-color-brand-secondary-hover);
+  background: var(--ui-color-brand-secondary-hover);
 }
 
 .base-button--outline {
-  --base-button-focus-color: var(--bs-color-action-primary);
+  --base-button-focus-color: var(--ui-color-action-primary);
 
-  color: var(--bs-color-action-primary);
+  color: var(--ui-color-action-primary);
   background: transparent;
-  border-color: var(--bs-color-action-primary);
+  border-color: var(--ui-color-action-primary);
 }
 
 .base-button--outline:hover:not(:disabled) {
-  color: var(--bs-color-text-on-primary);
-  background: var(--bs-color-action-primary);
-  border-color: var(--bs-color-action-primary);
+  color: var(--ui-color-text-on-primary);
+  background: var(--ui-color-action-primary);
+  border-color: var(--ui-color-action-primary);
 }
 
 .base-button--danger {
-  --base-button-focus-color: var(--bs-color-action-danger);
+  --base-button-focus-color: var(--ui-color-action-danger);
 
-  color: var(--bs-color-text-inverse);
-  background: var(--bs-color-action-danger);
+  color: var(--ui-color-text-inverse);
+  background: var(--ui-color-action-danger);
   box-shadow: var(--shadow-sm);
 }
 
 .base-button--danger:hover:not(:disabled) {
-  background: var(--bs-color-action-danger-hover);
+  background: var(--ui-color-action-danger-hover);
   box-shadow: var(--shadow-md);
 }
 
 .base-button--ghost {
-  --base-button-focus-color: var(--bs-color-border-strong);
+  --base-button-focus-color: var(--ui-color-border-strong);
 
-  color: var(--bs-color-text-heading);
+  color: var(--ui-color-text-heading);
   background: transparent;
-  border-color: var(--bs-color-border-strong);
+  border-color: var(--ui-color-border-strong);
 }
 
 .base-button--ghost:hover:not(:disabled) {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 
 .base-button--ghost-danger {
-  --base-button-focus-color: var(--bs-color-action-danger);
+  --base-button-focus-color: var(--ui-color-action-danger);
 
-  color: var(--bs-color-action-danger);
+  color: var(--ui-color-action-danger);
   background: transparent;
-  border-color: var(--bs-color-action-danger);
+  border-color: var(--ui-color-action-danger);
 }
 
 .base-button--ghost-danger:hover:not(:disabled) {
-  background: var(--bs-color-state-error-surface);
+  background: var(--ui-color-state-error-surface);
 }
 
 .base-button--inverse {
-  --base-button-focus-color: var(--bs-color-text-inverse);
+  --base-button-focus-color: var(--ui-color-text-inverse);
 
-  color: var(--bs-color-text-inverse);
+  color: var(--ui-color-text-inverse);
   background: transparent;
 }
 
 .base-button--inverse:hover:not(:disabled) {
-  color: var(--bs-color-brand-primary);
-  background: var(--bs-color-surface-inverse-hover);
+  color: var(--ui-color-brand-primary);
+  background: var(--ui-color-surface-inverse-hover);
 }
 
 .base-button--sm {

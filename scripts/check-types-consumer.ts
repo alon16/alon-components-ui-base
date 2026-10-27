@@ -33,7 +33,7 @@ const breadcrumbItems: BaseBreadcrumbItem[] = [
   { name: "Inicio", to: { name: "home" } },
   {
     name: "Pedido",
-    to: { name: "order-detail", params: { id: "HTK-1042" } },
+    to: { name: "order-detail", params: { id: "NP-1042" } },
   },
   { name: "Editar pedido" },
 ];

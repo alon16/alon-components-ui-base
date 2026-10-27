@@ -237,7 +237,7 @@ test("removing a chip updates both events without mutating the incoming selectio
 
 test("keyboard adds escaped text and removes the last chip; loaded fields are excluded from suggestions", async (t) => {
   const { root, updates, props } = mount(t, {
-    modelValue: [{ name: "reference", value: "HTK-1" }],
+    modelValue: [{ name: "reference", value: "NP-1" }],
   });
   const input = withClass(root, "base-search-ql__input")[0];
   input.props["onUpdate:modelValue"]("Ada.+");
@@ -246,7 +246,7 @@ test("keyboard adds escaped text and removes the last chip; loaded fields are ex
   input.props.onKeydown({ key: "Enter", preventDefault() {} });
   await nextTick();
   assert.deepEqual(props.modelValue, [
-    { name: "reference", value: "HTK-1" },
+    { name: "reference", value: "NP-1" },
     { name: "customer", value: ".*Ada\\.\\+.*" },
   ]);
   assert.equal(
@@ -255,7 +255,7 @@ test("keyboard adds escaped text and removes the last chip; loaded fields are ex
   );
   input.props.onKeydown({ key: "Backspace", preventDefault() {} });
   await nextTick();
-  assert.deepEqual(updates.at(-1), [{ name: "reference", value: "HTK-1" }]);
+  assert.deepEqual(updates.at(-1), [{ name: "reference", value: "NP-1" }]);
 });
 
 test("default selections replace a loaded value and toggle off", async (t) => {

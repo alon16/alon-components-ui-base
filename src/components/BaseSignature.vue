@@ -40,7 +40,7 @@ function drawGuide() {
   if (!context || !canvas.value) return;
 
   context.save();
-  context.strokeStyle = getCanvasColor("--bs-signature-guide-color");
+  context.strokeStyle = getCanvasColor("--ui-signature-guide-color");
   context.lineWidth = 1;
   context.beginPath();
   context.moveTo(10, canvas.value.height - 15);
@@ -53,7 +53,7 @@ function resetCanvas() {
   if (!context || !canvas.value) return;
 
   context.clearRect(0, 0, canvas.value.width, canvas.value.height);
-  context.fillStyle = getCanvasColor("--bs-signature-canvas-background");
+  context.fillStyle = getCanvasColor("--ui-signature-canvas-background");
   context.fillRect(0, 0, canvas.value.width, canvas.value.height);
   drawGuide();
 }
@@ -132,7 +132,7 @@ onMounted(() => {
   context.lineWidth = 2;
   context.lineCap = "round";
   context.lineJoin = "round";
-  context.strokeStyle = getCanvasColor("--bs-signature-ink-color");
+  context.strokeStyle = getCanvasColor("--ui-signature-ink-color");
   resetCanvas();
   if (signature.value) drawImage(signature.value);
 });
@@ -204,12 +204,12 @@ watch(
 .base-signature {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--space-2));
+  gap: var(--ui-field-gap, var(--space-2));
 }
 
 .base-signature__label {
-  color: var(--bs-color-text-body);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-color-text-body);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -225,15 +225,15 @@ watch(
   width: 100%;
   max-width: 100%;
   height: calc(v-bind(height) * 1px);
-  border: var(--border-width-thin) solid var(--bs-color-border-strong);
+  border: var(--border-width-thin) solid var(--ui-color-border-strong);
   border-radius: var(--radius-md);
-  background: var(--bs-color-surface-page);
+  background: var(--ui-color-surface-page);
   cursor: crosshair;
   touch-action: none;
 }
 
 .base-signature__canvas:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
@@ -247,13 +247,13 @@ watch(
 }
 
 .base-signature--error .base-signature__canvas {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-color-state-error-surface);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-color-state-error-surface);
 }
 
 .base-signature__message {
-  min-height: var(--bs-field-message-min-height);
-  color: var(--bs-color-text-muted);
+  min-height: var(--ui-field-message-min-height);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -264,6 +264,6 @@ watch(
 }
 
 .base-signature--error .base-signature__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 </style>

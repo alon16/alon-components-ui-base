@@ -95,15 +95,15 @@ function handleKeydown(event, index) {
   display: flex;
   gap: var(--space-5);
   padding-bottom: var(--space-1);
-  margin-bottom: var(--bs-tabs-margin-bottom);
-  border-bottom: var(--border-width-thin) solid var(--bs-color-border-inverse);
+  margin-bottom: var(--ui-tabs-margin-bottom);
+  border-bottom: var(--border-width-thin) solid var(--ui-color-border-inverse);
 }
 
 .base-tabs__tab {
   position: relative;
   padding: var(--space-2) var(--space-0);
   border: var(--space-0);
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
   background: transparent;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
@@ -124,7 +124,7 @@ function handleKeydown(event, index) {
 
 .base-tabs__tab:hover,
 .base-tabs__tab--active {
-  color: var(--bs-color-text-inverse);
+  color: var(--ui-color-text-inverse);
 }
 
 .base-tabs__tab--active {
@@ -132,11 +132,11 @@ function handleKeydown(event, index) {
 }
 
 .base-tabs__tab--active::after {
-  background: var(--bs-color-brand-primary);
+  background: var(--ui-color-brand-primary);
 }
 
 .base-tabs__tab:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 </style>

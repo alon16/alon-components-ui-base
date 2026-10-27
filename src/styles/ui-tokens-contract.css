@@ -1,0 +1,170 @@
+/*
+ * Contrato público de tema de la biblioteca.
+ *
+ * Los componentes solo consumen propiedades --ui-*. Esta hoja no asigna valores
+ * visuales: cada aplicación debe importar un tema después de los estilos de la
+ * librería. El tema de referencia está en ./themes/violet.css.
+ *
+ * Familias principales:
+ * --ui-color-{brand,action,text,surface,border,state,focus}-*
+ * --ui-shadow-*, --ui-radius-*, --ui-space-*, --ui-font-*, --ui-text-*
+ * --ui-control-*, --ui-switch-*, --ui-signature-*, --ui-tabs-*
+ * --ui-date-picker-menu-* (fondo, texto, hover, selección, borde, foco,
+ * deshabilitado, rango, tooltip, scrollbar y cargador del calendario externo)
+ * --ui-breadcrumb-* (espaciado, transición y foco del breadcrumb)
+ */
+
+:root {
+  --ui-breadcrumb-gap-block: var(--space-1);
+  --ui-breadcrumb-gap-inline: var(--space-2);
+  --ui-breadcrumb-transition: var(--transition-fast);
+  --ui-breadcrumb-underline-offset: var(--space-1);
+  --ui-breadcrumb-focus-radius: var(--radius-sm);
+  --ui-breadcrumb-focus-width: var(--focus-outline-width);
+  --ui-breadcrumb-focus-offset: var(--focus-outline-offset);
+
+  /* BaseAlert: fondos, bordes y texto semánticos por tono. */
+  --ui-alert-danger-background: var(--ui-color-state-error-surface);
+  --ui-alert-danger-border: var(--ui-color-state-error);
+  --ui-alert-danger-text: var(--ui-color-state-error);
+  --ui-alert-warning-background: var(--ui-color-surface-highlight);
+  --ui-alert-warning-border: var(--ui-color-state-warning);
+  --ui-alert-warning-text: var(--ui-color-state-warning);
+  --ui-alert-info-background: var(--ui-color-surface-subtle);
+  --ui-alert-info-border: var(--ui-color-status-info-text);
+  --ui-alert-info-text: var(--ui-color-status-info-text);
+  --ui-alert-primary-background: var(--ui-color-surface-highlight);
+  --ui-alert-primary-border: var(--ui-color-brand-primary);
+  --ui-alert-primary-text: var(--ui-color-brand-secondary);
+  --ui-alert-secondary-background: var(--ui-color-surface-muted);
+  --ui-alert-secondary-border: var(--ui-color-brand-secondary);
+  --ui-alert-secondary-text: var(--ui-color-brand-secondary);
+  --ui-alert-close-hover-background: var(--ui-color-surface-muted);
+
+  /* Layout común de formularios. */
+  --ui-form-field-gap: calc(var(--space-2) * 0.75);
+  --ui-form-section-gap: var(--space-3);
+  --ui-form-label-color: var(--ui-color-text-muted);
+  --ui-form-value-color: var(--ui-color-text-heading);
+  --ui-form-label-size: var(--text-label-size);
+  --ui-choice-field-min-height: var(--control-height-sm);
+  /* Controles de formulario: fondo, borde y estado deshabilitado compartidos. */
+  --ui-control-background: var(--ui-color-surface-page);
+  --ui-control-focus-background: var(--ui-color-surface-muted);
+  --ui-overlay-background: var(--ui-color-surface-page);
+  --ui-control-border: var(--ui-color-border-strong);
+  --ui-control-disabled-background: var(--ui-color-surface-muted);
+  --ui-control-disabled-border: var(--ui-color-border-strong);
+  --ui-control-hover-border: var(--ui-color-text-muted);
+  --ui-control-focus-border: var(--ui-color-brand-primary);
+  --ui-control-focus-shadow: var(--ui-color-focus-shadow);
+  --ui-dialog-backdrop-background: var(--ui-color-surface-inverse);
+  --ui-loading-overlay-background: var(--ui-color-surface-page);
+  --ui-tooltip-border: var(--ui-color-border-default);
+  --ui-tabs-margin-bottom: var(--space-0);
+  --ui-field-gap: var(--space-2);
+  --ui-field-message-min-height: calc(
+    var(--font-size-xs) * var(--line-height-heading)
+  );
+
+  /* BaseCard. */
+  --ui-card-background: var(--ui-color-surface-page);
+  --ui-card-padding-compact: var(--space-4);
+
+  /* BaseTable. */
+  --ui-table-sort-icon-gap: 8px;
+  --ui-table-edit-row-padding-block: 8px;
+  --ui-table-pagination-gap: 8px;
+  --ui-table-cell-padding-block: 4px;
+  --ui-table-cell-padding-inline: 16px;
+  --ui-table-row-min-height: 40px;
+  --ui-table-selection-cell-padding-inline: 4px;
+  --ui-table-footer-gap: 4px;
+  --ui-table-footer-padding-block: 4px;
+  --ui-table-footer-padding-inline: 16px;
+  --ui-table-summary-gap: 4px;
+  --ui-table-ellipsis-min-width: 4px;
+  --ui-table-control-padding: 0;
+  --ui-table-control-border: 0;
+  --ui-table-summary-margin: 0;
+  --ui-table-border-spacing: 0;
+  --ui-table-last-row-border: 0;
+  --ui-table-cell-leading: var(--line-height-heading);
+
+  /* BaseBadge. */
+  --ui-badge-sm-padding-block: 0.125rem;
+  --ui-badge-sm-padding-inline: var(--space-2);
+  --ui-badge-sm-line-height: 1.4;
+  --ui-badge-md-padding-block: var(--space-1);
+  --ui-badge-md-padding-inline: var(--space-3);
+  --ui-badge-md-line-height: var(--line-height-heading);
+  --ui-badge-fixed-width: 148px;
+  --ui-color-badge-progress: var(--ui-color-state-warning);
+  --ui-color-badge-progress-surface: var(--ui-color-surface-highlight);
+  --ui-color-badge-violet: var(--ui-color-brand-secondary);
+  --ui-color-badge-violet-surface: var(--ui-color-surface-muted);
+  --ui-badge-neutral-text: var(--ui-color-text-muted);
+  --ui-badge-neutral-background: var(--ui-color-surface-muted);
+  --ui-badge-neutral-border: var(--ui-color-border-strong);
+  --ui-badge-info-text: var(--ui-color-status-info-text);
+  --ui-badge-info-background: var(--ui-color-surface-subtle);
+  --ui-badge-info-border: var(--ui-color-status-info-text);
+  --ui-badge-success-text: var(--ui-color-state-success);
+  --ui-badge-success-background: var(--ui-color-state-success-surface);
+  --ui-badge-success-border: var(--ui-color-state-success);
+  --ui-badge-warning-text: var(--ui-color-state-warning);
+  --ui-badge-warning-background: var(--ui-color-surface-highlight);
+  --ui-badge-warning-border: var(--ui-color-state-warning);
+  --ui-badge-error-text: var(--ui-color-state-error);
+  --ui-badge-error-background: var(--ui-color-state-error-surface);
+  --ui-badge-error-border: var(--ui-color-state-error);
+  --ui-badge-critical-text: var(--ui-color-action-danger);
+  --ui-badge-critical-background: var(--ui-color-state-error-surface);
+  --ui-badge-critical-border: var(--ui-color-action-danger);
+  --ui-badge-progress-text: var(--ui-color-badge-progress);
+  --ui-badge-progress-background: var(--ui-color-badge-progress-surface);
+  --ui-badge-progress-border: var(--ui-color-badge-progress);
+  --ui-badge-violet-text: var(--ui-color-badge-violet);
+  --ui-badge-violet-background: var(--ui-color-badge-violet-surface);
+  --ui-badge-violet-border: var(--ui-color-badge-violet);
+
+  /* Alias conservados para consumidores existentes. */
+  --base-field-gap: var(--ui-field-gap);
+  --base-field-message-min-height: var(--ui-field-message-min-height);
+
+  /* Puente de transición: el código existente puede seguir usando los nombres
+     anteriores mientras los valores públicos se definen exclusivamente en --ui-*. */
+  --color-brand-primary: var(--ui-color-brand-primary);
+  --color-brand-primary-hover: var(--ui-color-brand-primary-hover);
+  --color-brand-secondary: var(--ui-color-brand-secondary);
+  --color-brand-secondary-hover: var(--ui-color-brand-secondary-hover);
+  --color-surface-page: var(--ui-color-surface-page);
+  --color-surface-subtle: var(--ui-color-surface-subtle);
+  --color-surface-muted: var(--ui-color-surface-muted);
+  --color-surface-inverse: var(--ui-color-surface-inverse);
+  --color-surface-footer: var(--ui-color-surface-footer);
+  --color-surface-highlight: var(--ui-color-surface-highlight);
+  --color-surface-inverse-hover: var(--ui-color-surface-inverse-hover);
+  --color-text-heading: var(--ui-color-text-heading);
+  --color-text-body: var(--ui-color-text-body);
+  --color-text-muted: var(--ui-color-text-muted);
+  --color-text-inverse: var(--ui-color-text-inverse);
+  --color-text-inverse-muted: var(--ui-color-text-inverse-muted);
+  --color-text-on-primary: var(--ui-color-text-on-primary);
+  --color-border-default: var(--ui-color-border-default);
+  --color-border-strong: var(--ui-color-border-strong);
+  --color-border-inverse: var(--ui-color-border-inverse);
+  --color-action-primary: var(--ui-color-action-primary);
+  --color-action-primary-hover: var(--ui-color-action-primary-hover);
+  --color-action-secondary: var(--ui-color-action-secondary);
+  --color-action-danger: var(--ui-color-action-danger);
+  --color-action-danger-hover: var(--ui-color-action-danger-hover);
+  --color-focus-ring: var(--ui-color-focus-ring);
+  --color-focus-shadow: var(--ui-color-focus-shadow);
+  --color-state-error: var(--ui-color-state-error);
+  --color-state-error-surface: var(--ui-color-state-error-surface);
+  --color-state-warning: var(--ui-color-state-warning);
+  --color-state-success: var(--ui-color-state-success);
+  --color-state-success-surface: var(--ui-color-state-success-surface);
+  --color-status-info-text: var(--ui-color-status-info-text);
+}

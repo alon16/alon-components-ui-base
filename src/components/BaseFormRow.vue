@@ -45,7 +45,7 @@ const gridTemplateColumns = computed(() => {
 <style scoped>
 .base-form-row {
   display: grid;
-  gap: var(--bs-form-field-gap);
+  gap: var(--ui-form-field-gap);
   align-items: var(--base-form-row-align-items, stretch);
   grid-template-columns: var(
     --base-form-row-template,

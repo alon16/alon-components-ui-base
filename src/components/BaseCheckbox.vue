@@ -102,41 +102,41 @@ const hasError = computed(() => Boolean(props.error) || props.invalid);
 
 <style scoped>
 .base-checkbox {
-  --checkbox-color: var(--bs-color-brand-primary);
+  --checkbox-color: var(--ui-color-brand-primary);
 
   display: grid;
   min-width: 0;
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 
 .base-checkbox--secondary {
-  --checkbox-color: var(--bs-color-brand-secondary);
+  --checkbox-color: var(--ui-color-brand-secondary);
 }
 
 .base-checkbox--success {
-  --checkbox-color: var(--bs-color-state-success);
+  --checkbox-color: var(--ui-color-state-success);
 }
 
 .base-checkbox--danger {
-  --checkbox-color: var(--bs-color-state-error);
+  --checkbox-color: var(--ui-color-state-error);
 }
 
 .base-checkbox--error {
-  --checkbox-color: var(--bs-color-state-error);
+  --checkbox-color: var(--ui-color-state-error);
 }
 
 .base-checkbox__field {
   display: grid;
   min-height: var(--base-choice-field-min-height);
   min-width: 0;
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
-  color: var(--bs-color-text-body);
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
+  color: var(--ui-color-text-body);
   cursor: pointer;
 }
 
 .base-checkbox__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -193,10 +193,10 @@ const hasError = computed(() => Boolean(props.error) || props.invalid);
   flex: 0 0 var(--space-4);
   align-items: center;
   justify-content: center;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-sm);
   color: transparent;
-  background: var(--bs-control-background);
+  background: var(--ui-control-background);
   font-size: var(--font-size-2xs);
   font-weight: var(--font-weight-bold);
   line-height: 1;
@@ -226,7 +226,7 @@ const hasError = computed(() => Boolean(props.error) || props.invalid);
 .base-checkbox__input:checked + .base-checkbox__control,
 .base-checkbox__input:indeterminate + .base-checkbox__control {
   border-color: var(--checkbox-color);
-  color: var(--bs-color-text-on-primary);
+  color: var(--ui-color-text-on-primary);
   background: var(--checkbox-color);
 }
 
@@ -242,27 +242,27 @@ const hasError = computed(() => Boolean(props.error) || props.invalid);
 }
 
 .base-checkbox__input:focus-visible + .base-checkbox__control {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
 .base-checkbox__input:disabled + .base-checkbox__control {
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 
 .base-checkbox--error
   .base-checkbox__input:not(:checked, :indeterminate)
   + .base-checkbox__control {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-color-state-error-surface);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-color-state-error-surface);
 }
 
 .base-checkbox__message {
   flex-basis: 100%;
-  min-height: var(--bs-field-message-min-height);
+  min-height: var(--ui-field-message-min-height);
   margin-top: calc(var(--space-2) * -0.5);
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
 }

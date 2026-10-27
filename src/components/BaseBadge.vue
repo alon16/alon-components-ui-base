@@ -24,82 +24,82 @@ withDefaults(defineProps<BaseBadgeProps>(), {
 
 <style scoped>
 .base-badge {
-  --badge-text: var(--bs-badge-neutral-text);
-  --badge-background: var(--bs-badge-neutral-background);
-  --badge-border: var(--bs-badge-neutral-border);
+  --badge-text: var(--ui-badge-neutral-text);
+  --badge-background: var(--ui-badge-neutral-background);
+  --badge-border: var(--ui-badge-neutral-border);
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: var(--bs-badge-sm-padding-block) var(--bs-badge-sm-padding-inline);
+  padding: var(--ui-badge-sm-padding-block) var(--ui-badge-sm-padding-inline);
   color: var(--badge-text);
   background: var(--badge-background);
   border: var(--border-width-thin) solid var(--badge-border);
   border-radius: var(--radius-round);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--bs-badge-sm-line-height);
+  line-height: var(--ui-badge-sm-line-height);
   white-space: nowrap;
 }
 
 .base-badge--sm {
-  padding-block: var(--bs-badge-sm-padding-block);
-  padding-inline: var(--bs-badge-sm-padding-inline);
+  padding-block: var(--ui-badge-sm-padding-block);
+  padding-inline: var(--ui-badge-sm-padding-inline);
   font-size: var(--font-size-xs);
-  line-height: var(--bs-badge-sm-line-height);
+  line-height: var(--ui-badge-sm-line-height);
 }
 
 .base-badge--md {
-  padding-block: var(--bs-badge-md-padding-block);
-  padding-inline: var(--bs-badge-md-padding-inline);
+  padding-block: var(--ui-badge-md-padding-block);
+  padding-inline: var(--ui-badge-md-padding-inline);
   font-size: var(--text-body-sm-size);
-  line-height: var(--bs-badge-md-line-height);
+  line-height: var(--ui-badge-md-line-height);
 }
 
 .base-badge--width-fixed {
-  width: var(--bs-badge-fixed-width);
-  min-width: var(--bs-badge-fixed-width);
+  width: var(--ui-badge-fixed-width);
+  min-width: var(--ui-badge-fixed-width);
 }
 
 .base-badge--info {
-  --badge-text: var(--bs-badge-info-text);
-  --badge-background: var(--bs-badge-info-background);
-  --badge-border: var(--bs-badge-info-border);
+  --badge-text: var(--ui-badge-info-text);
+  --badge-background: var(--ui-badge-info-background);
+  --badge-border: var(--ui-badge-info-border);
 }
 
 .base-badge--success {
-  --badge-text: var(--bs-badge-success-text);
-  --badge-background: var(--bs-badge-success-background);
-  --badge-border: var(--bs-badge-success-border);
+  --badge-text: var(--ui-badge-success-text);
+  --badge-background: var(--ui-badge-success-background);
+  --badge-border: var(--ui-badge-success-border);
 }
 
 .base-badge--warning {
-  --badge-text: var(--bs-badge-warning-text);
-  --badge-background: var(--bs-badge-warning-background);
-  --badge-border: var(--bs-badge-warning-border);
+  --badge-text: var(--ui-badge-warning-text);
+  --badge-background: var(--ui-badge-warning-background);
+  --badge-border: var(--ui-badge-warning-border);
 }
 
 .base-badge--error {
-  --badge-text: var(--bs-badge-error-text);
-  --badge-background: var(--bs-badge-error-background);
-  --badge-border: var(--bs-badge-error-border);
+  --badge-text: var(--ui-badge-error-text);
+  --badge-background: var(--ui-badge-error-background);
+  --badge-border: var(--ui-badge-error-border);
 }
 
 .base-badge--critical {
-  --badge-text: var(--bs-badge-critical-text);
-  --badge-background: var(--bs-badge-critical-background);
-  --badge-border: var(--bs-badge-critical-border);
+  --badge-text: var(--ui-badge-critical-text);
+  --badge-background: var(--ui-badge-critical-background);
+  --badge-border: var(--ui-badge-critical-border);
 }
 
 .base-badge--progress {
-  --badge-text: var(--bs-badge-progress-text);
-  --badge-background: var(--bs-badge-progress-background);
-  --badge-border: var(--bs-badge-progress-border);
+  --badge-text: var(--ui-badge-progress-text);
+  --badge-background: var(--ui-badge-progress-background);
+  --badge-border: var(--ui-badge-progress-border);
 }
 
 .base-badge--violet {
-  --badge-text: var(--bs-badge-violet-text);
-  --badge-background: var(--bs-badge-violet-background);
-  --badge-border: var(--bs-badge-violet-border);
+  --badge-text: var(--ui-badge-violet-text);
+  --badge-background: var(--ui-badge-violet-background);
+  --badge-border: var(--ui-badge-violet-border);
 }
 </style>

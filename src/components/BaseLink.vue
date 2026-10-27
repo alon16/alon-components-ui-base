@@ -71,40 +71,40 @@ const resolvedRel = computed(() => {
 }
 
 .base-link:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
 .base-link--brand {
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
 }
 
 .base-link--brand:hover {
-  color: var(--bs-color-brand-primary-hover);
+  color: var(--ui-color-brand-primary-hover);
 }
 
 .base-link--body {
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
 }
 
 .base-link--body:hover {
-  color: var(--bs-color-text-heading);
+  color: var(--ui-color-text-heading);
 }
 
 .base-link--muted {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 
 .base-link--muted:hover {
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
 }
 
 .base-link--inverse {
-  color: var(--bs-color-text-inverse);
+  color: var(--ui-color-text-inverse);
 }
 
 .base-link--inverse:hover {
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
 }
 
 .base-link--underline-always {

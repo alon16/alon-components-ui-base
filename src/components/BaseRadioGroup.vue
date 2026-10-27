@@ -92,22 +92,22 @@ const errorId = computed(() => `${groupId.value}-error`);
   min-width: var(--space-0);
   margin: var(--space-0);
   padding: var(--space-0);
-  border: var(--border-width-thin) solid var(--bs-color-border-default);
+  border: var(--border-width-thin) solid var(--ui-color-border-default);
   border-radius: var(--radius-md);
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 
 .base-radio-group__label {
   padding: var(--space-0) var(--space-2);
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
 
 .base-radio-group__options {
   display: grid;
-  gap: var(--bs-form-field-gap);
+  gap: var(--ui-form-field-gap);
   padding: var(--space-2) var(--space-3) 0;
 }
 
@@ -115,7 +115,7 @@ const errorId = computed(() => `${groupId.value}-error`);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  column-gap: var(--bs-form-field-gap);
+  column-gap: var(--ui-form-field-gap);
 }
 
 .base-radio-group__options :deep(.base-radio--label-top),
@@ -132,17 +132,17 @@ const errorId = computed(() => `${groupId.value}-error`);
 
 .base-radio-group__message {
   box-sizing: border-box;
-  height: var(--bs-field-message-min-height);
-  min-height: var(--bs-field-message-min-height);
+  height: var(--ui-field-message-min-height);
+  min-height: var(--ui-field-message-min-height);
   margin-top: var(--space-0);
   padding: var(--space-0) var(--space-3) var(--space-3);
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
 }
 
 .base-radio-group--error {
-  border-color: var(--bs-color-state-error);
+  border-color: var(--ui-color-state-error);
 }
 
 .base-radio-group--borderless {

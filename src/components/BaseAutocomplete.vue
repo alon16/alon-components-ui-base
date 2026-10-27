@@ -570,11 +570,11 @@ defineExpose({
 .base-autocomplete {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 .base-autocomplete__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -587,7 +587,7 @@ defineExpose({
   flex-wrap: wrap;
 }
 .base-autocomplete--inverse .base-autocomplete__label {
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
 }
 .base-autocomplete__control {
   position: relative;
@@ -596,10 +596,10 @@ defineExpose({
   width: 100%;
   min-width: var(--space-0);
   box-sizing: border-box;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-form-value-color);
-  background: var(--bs-control-background);
+  color: var(--ui-form-value-color);
+  background: var(--ui-control-background);
   font: inherit;
   transition:
     border-color var(--transition-fast),
@@ -607,21 +607,21 @@ defineExpose({
     background-color var(--transition-fast);
 }
 .base-autocomplete__input::placeholder {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 .base-autocomplete__input:hover:not(:disabled):not(:read-only):not(:focus) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-autocomplete__input:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-autocomplete__input:disabled {
   cursor: not-allowed;
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 .base-autocomplete__input:read-only {
   cursor: default;
@@ -647,7 +647,7 @@ defineExpose({
   top: 50%;
   left: var(--space-3);
   display: inline-flex;
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -659,7 +659,7 @@ defineExpose({
   position: absolute;
   top: 50%;
   right: var(--space-3);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   transform: translateY(-50%);
 }
 .base-autocomplete__indicator {
@@ -679,11 +679,11 @@ defineExpose({
   cursor: pointer;
 }
 .base-autocomplete__clear:hover {
-  color: var(--bs-color-text-heading);
-  background: var(--bs-color-surface-muted);
+  color: var(--ui-color-text-heading);
+  background: var(--ui-color-surface-muted);
 }
 .base-autocomplete__clear:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 .base-autocomplete__list {
@@ -696,10 +696,10 @@ defineExpose({
   margin: 0;
   padding: var(--space-1);
   overflow-y: auto;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  background: var(--bs-overlay-background);
+  background: var(--ui-overlay-background);
   list-style: none;
   bottom: var(--base-menu-bottom, auto);
 }
@@ -711,15 +711,15 @@ defineExpose({
   line-height: var(--line-height-base);
 }
 .base-autocomplete__option {
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
   cursor: pointer;
 }
 .base-autocomplete__option--active,
 .base-autocomplete__option:hover {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 .base-autocomplete__option--selected {
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
   font-weight: var(--font-weight-semibold);
 }
 .base-autocomplete__option--disabled {
@@ -730,30 +730,30 @@ defineExpose({
   background: transparent;
 }
 .base-autocomplete__status {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 .base-autocomplete__status--error {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 .base-autocomplete--error .base-autocomplete__input {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-control-background);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-control-background);
   box-shadow: none;
 }
 .base-autocomplete--success .base-autocomplete__input {
-  border-color: var(--bs-color-state-success);
-  background: var(--bs-color-state-success-surface);
+  border-color: var(--ui-color-state-success);
+  background: var(--ui-color-state-success-surface);
 }
 .base-autocomplete__message {
   margin-top: calc(var(--space-2) * -0.5);
   min-height: var(
-    --bs-field-message-min-height,
+    --ui-field-message-min-height,
     var(
       --base-field-message-min-height,
       calc(var(--font-size-xs) * var(--line-height-heading))
     )
   );
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -762,10 +762,10 @@ defineExpose({
   visibility: visible;
 }
 .base-autocomplete--error .base-autocomplete__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 .base-autocomplete--success .base-autocomplete__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 @keyframes base-autocomplete-spin {
   to {

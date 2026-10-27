@@ -97,12 +97,12 @@ defineExpose({ focus: () => textareaElement.value?.focus() });
 .base-textarea {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--space-2));
+  gap: var(--ui-field-gap, var(--space-2));
 }
 
 .base-textarea__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -112,10 +112,10 @@ defineExpose({ focus: () => textareaElement.value?.focus() });
   min-width: var(--space-0);
   padding: var(--space-3) var(--space-4);
   resize: vertical;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-form-value-color);
-  background: var(--bs-control-background);
+  color: var(--ui-form-value-color);
+  background: var(--ui-control-background);
   font: inherit;
   font-size: var(--font-size-sm);
   transition:
@@ -125,39 +125,39 @@ defineExpose({ focus: () => textareaElement.value?.focus() });
 }
 
 .base-textarea__input::placeholder {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 
 .base-textarea__input:hover:not(:disabled) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 
 .base-textarea__input:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 
 .base-textarea__input:disabled {
   cursor: not-allowed;
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 
 .base-textarea--error .base-textarea__input {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-color-state-error-surface);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-color-state-error-surface);
 }
 
 .base-textarea--success .base-textarea__input {
-  border-color: var(--bs-color-state-success);
-  background: var(--bs-color-state-success-surface);
+  border-color: var(--ui-color-state-success);
+  background: var(--ui-color-state-success-surface);
 }
 
 .base-textarea__message {
-  min-height: var(--bs-field-message-min-height);
-  color: var(--bs-color-text-muted);
+  min-height: var(--ui-field-message-min-height);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -169,16 +169,16 @@ defineExpose({ focus: () => textareaElement.value?.focus() });
 
 .base-textarea__character-count {
   justify-self: end;
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
 }
 
 .base-textarea--error .base-textarea__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 
 .base-textarea--success .base-textarea__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 </style>

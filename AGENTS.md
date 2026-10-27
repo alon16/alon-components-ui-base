@@ -56,10 +56,10 @@ aplican a todo el proyecto y deben respetarse al crear o modificar componentes.
 
 - No declares colores literales en componentes: están prohibidos valores hexadecimales, `rgb()`,
   `rgba()`, `hsl()`, `hsla()`, `color-mix()` y nombres de colores usados como valor.
-- Los componentes solo pueden consumir tokens semánticos `--bs-*`; no deben consumir directamente
+- Los componentes solo pueden consumir tokens semánticos `--ui-*`; no deben consumir directamente
   tokens de paleta. Antes de crear un token, comprueba si uno existente representa la misma
   intención visual.
-- Todo token nuevo debe declararse en `src/styles/bs-tokens-contract.css`, recibir un valor en
+- Todo token nuevo debe declararse en `src/styles/ui-tokens-contract.css`, recibir un valor en
   `src/styles/themes/violet.css` y `src/styles/themes/dark-example.css`, y documentarse en
   `docs/theming.md`.
 - Al crear un componente, inclúyelo en el alcance de `scripts/check-base-colors.mjs`.

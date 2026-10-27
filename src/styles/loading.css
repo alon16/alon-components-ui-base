@@ -6,7 +6,7 @@
   min-height: var(--control-height-lg);
   place-items: center;
   border-radius: inherit;
-  background: var(--bs-loading-overlay-background);
+  background: var(--ui-loading-overlay-background);
 }
 
 .v-loading-overlay[hidden] {
@@ -16,7 +16,7 @@
 .v-loading-overlay__spinner {
   width: var(--icon-size-lg);
   aspect-ratio: 1;
-  border: var(--border-width-accent) solid var(--bs-color-brand-primary);
+  border: var(--border-width-accent) solid var(--ui-color-brand-primary);
   border-right-color: transparent;
   border-radius: var(--radius-round);
   animation: v-loading-spin var(--motion-spin-duration) linear infinite;

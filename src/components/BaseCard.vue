@@ -108,7 +108,7 @@ defineProps({
 .base-card-frame--title-outside {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  gap: var(--bs-form-section-gap);
+  gap: var(--ui-form-section-gap);
 }
 
 .base-card {
@@ -133,7 +133,7 @@ defineProps({
 }
 
 .base-card__inside-title {
-  margin-bottom: calc(var(--bs-form-section-gap, 12px) + 4px);
+  margin-bottom: calc(var(--ui-form-section-gap, 12px) + 4px);
 }
 
 .base-card__title {
@@ -146,34 +146,34 @@ defineProps({
 
 .base-card__outside-title :deep(.base-icon),
 .base-card__inside-title :deep(.base-icon) {
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
 }
 
 .base-card--surface-page {
-  color: var(--bs-color-text-body);
-  background: var(--bs-card-background);
+  color: var(--ui-color-text-body);
+  background: var(--ui-card-background);
 }
 
 .base-card--surface-inverse {
-  color: var(--bs-color-text-inverse);
-  background: var(--bs-color-surface-inverse);
+  color: var(--ui-color-text-inverse);
+  background: var(--ui-color-surface-inverse);
 }
 
 .base-card--surface-primary {
-  color: var(--bs-color-text-on-primary);
-  background: var(--bs-color-brand-primary);
+  color: var(--ui-color-text-on-primary);
+  background: var(--ui-color-brand-primary);
 }
 
 .base-card--surface-page.base-card--outlined {
-  border: var(--border-width-thin) solid var(--bs-color-border-default);
+  border: var(--border-width-thin) solid var(--ui-color-border-default);
 }
 
 .base-card--surface-inverse.base-card--outlined {
-  border: var(--border-width-thin) solid var(--bs-color-border-inverse);
+  border: var(--border-width-thin) solid var(--ui-color-border-inverse);
 }
 
 .base-card--surface-primary.base-card--outlined {
-  border: var(--border-width-thin) solid var(--bs-color-brand-primary);
+  border: var(--border-width-thin) solid var(--ui-color-brand-primary);
 }
 
 .base-card--padding-comfortable {
@@ -181,7 +181,7 @@ defineProps({
 }
 
 .base-card--padding-compact {
-  padding: var(--bs-card-padding-compact);
+  padding: var(--ui-card-padding-compact);
 }
 
 .base-card--padding-none {

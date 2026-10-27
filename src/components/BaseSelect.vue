@@ -603,11 +603,11 @@ onBeforeUnmount(() => {
 .base-select {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 .base-select__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
@@ -620,7 +620,7 @@ onBeforeUnmount(() => {
   flex-wrap: wrap;
 }
 .base-select--inverse .base-select__label {
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
 }
 .base-select__control {
   position: relative;
@@ -629,10 +629,10 @@ onBeforeUnmount(() => {
 .base-select__input {
   width: 100%;
   text-align: left;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-form-value-color);
-  background: var(--bs-control-background);
+  color: var(--ui-form-value-color);
+  background: var(--ui-control-background);
   font: inherit;
   transition:
     border-color var(--transition-fast),
@@ -650,15 +650,15 @@ onBeforeUnmount(() => {
   padding: var(--space-1) var(--space-10) var(--space-1) var(--space-2);
   overflow: visible;
   box-sizing: border-box;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  color: var(--bs-color-text-body);
-  background: var(--bs-control-background);
+  color: var(--ui-color-text-body);
+  background: var(--ui-control-background);
 }
 .base-select__multiple-control:focus-within {
-  border-color: var(--bs-control-focus-border);
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  border-color: var(--ui-control-focus-border);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-select__search {
   min-width: 4rem;
@@ -680,7 +680,7 @@ onBeforeUnmount(() => {
   gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
   font-size: var(--font-size-xs);
 }
 .base-select__chip--measurement {
@@ -694,8 +694,8 @@ onBeforeUnmount(() => {
   padding: var(--space-1) var(--space-2);
   border: 0;
   border-radius: var(--radius-sm);
-  color: var(--bs-color-text-muted);
-  background: var(--bs-color-surface-muted);
+  color: var(--ui-color-text-muted);
+  background: var(--ui-color-surface-muted);
   font: inherit;
   font-size: var(--font-size-xs);
   cursor: pointer;
@@ -706,7 +706,7 @@ onBeforeUnmount(() => {
   flex: 0 0 auto;
 }
 .base-select__collapsed-trigger:focus-visible {
-  outline: var(--border-width-medium) solid var(--bs-color-brand-primary);
+  outline: var(--border-width-medium) solid var(--ui-color-brand-primary);
   outline-offset: var(--space-px);
 }
 .base-select__collapsed-tooltip {
@@ -719,10 +719,10 @@ onBeforeUnmount(() => {
   flex-wrap: wrap;
   gap: var(--space-1);
   padding: var(--space-2);
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  background: var(--bs-control-background);
+  background: var(--ui-control-background);
 }
 .base-select__chip-remove {
   display: inline-grid;
@@ -736,38 +736,38 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 .base-select__chip-remove:focus-visible {
-  outline: var(--border-width-medium) solid var(--bs-color-brand-primary);
+  outline: var(--border-width-medium) solid var(--ui-color-brand-primary);
   outline-offset: var(--space-px);
 }
 .base-select__chip-remove:disabled {
   cursor: not-allowed;
 }
 .base-select__input:hover:not(:disabled):not(:focus) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-select__multiple-control:hover:not(:focus-within):not(:has(:disabled)) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-select__input:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-select__input:disabled {
   cursor: not-allowed;
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 .base-select--error .base-select__input,
 .base-select--error .base-select__multiple-control {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-control-background);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-control-background);
   box-shadow: none;
 }
 .base-select__multiple-control:has(:disabled) {
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 .base-select__input--sm {
   height: var(--control-height-sm);
@@ -809,10 +809,10 @@ onBeforeUnmount(() => {
   margin: 0;
   padding: var(--space-1);
   overflow-y: auto;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  background: var(--bs-overlay-background);
+  background: var(--ui-overlay-background);
   list-style: none;
   bottom: var(--base-menu-bottom, auto);
 }
@@ -821,18 +821,18 @@ onBeforeUnmount(() => {
   border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
   cursor: pointer;
 }
 .base-select__option:hover {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 .base-select__option--active {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 .base-select__option--selected {
   background: transparent;
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
   font-weight: var(--font-weight-semibold);
 }
 .base-select__option--selected:hover,
@@ -849,13 +849,13 @@ onBeforeUnmount(() => {
 .base-select__message {
   margin-top: calc(var(--space-2) * -0.5);
   min-height: var(
-    --bs-field-message-min-height,
+    --ui-field-message-min-height,
     var(
       --base-field-message-min-height,
       calc(var(--font-size-xs) * var(--line-height-heading))
     )
   );
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -864,9 +864,9 @@ onBeforeUnmount(() => {
   visibility: visible;
 }
 .base-select--error .base-select__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 .base-select--success .base-select__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 </style>

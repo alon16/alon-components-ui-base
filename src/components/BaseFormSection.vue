@@ -38,7 +38,7 @@ const props = defineProps({
 <style scoped>
 .base-form-section {
   display: grid;
-  gap: var(--bs-form-section-gap);
+  gap: var(--ui-form-section-gap);
   min-width: var(--space-0);
 }
 
@@ -49,7 +49,7 @@ const props = defineProps({
 .base-form-section__header,
 .base-form-section__content {
   display: grid;
-  gap: var(--bs-form-field-gap);
+  gap: var(--ui-form-field-gap);
   min-width: var(--space-0);
 }
 </style>

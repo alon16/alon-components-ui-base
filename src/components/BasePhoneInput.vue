@@ -400,7 +400,7 @@ defineExpose({ focus: () => numberInput.value?.focus() });
 .base-phone-input {
   display: grid;
   min-width: var(--space-0);
-  gap: var(--bs-field-gap, var(--base-field-gap, var(--space-2)));
+  gap: var(--ui-field-gap, var(--base-field-gap, var(--space-2)));
 }
 .base-phone-input__label-row {
   display: flex;
@@ -411,33 +411,33 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   flex-wrap: wrap;
 }
 .base-phone-input__label {
-  color: var(--bs-form-label-color);
-  font-size: var(--bs-form-label-size);
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
   font-weight: var(--text-label-weight);
   line-height: var(--text-label-leading);
 }
 .base-phone-input--inverse .base-phone-input__label {
-  color: var(--bs-color-text-inverse-muted);
+  color: var(--ui-color-text-inverse-muted);
 }
 .base-phone-input__control {
   position: relative;
   display: flex;
   min-width: 0;
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-md);
-  background: var(--bs-control-background);
+  background: var(--ui-control-background);
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
 }
 .base-phone-input__control:hover:not(:has(:disabled)):not(:focus-within) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-phone-input__control:focus-within {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-phone-input__control--sm {
   height: var(--control-height-sm);
@@ -466,15 +466,15 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   gap: var(--space-2);
   padding: 0 var(--space-3);
   border: 0;
-  border-right: var(--border-width-thin) solid var(--bs-color-border-default);
+  border-right: var(--border-width-thin) solid var(--ui-color-border-default);
   border-radius: var(--radius-md) 0 0 var(--radius-md);
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
   background: transparent;
   font: inherit;
   cursor: pointer;
 }
 .base-phone-input__country:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: calc(var(--focus-outline-offset) * -1);
 }
 .base-phone-input__country:disabled {
@@ -488,25 +488,25 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   border: 0;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   outline: 0;
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
   background: transparent;
   font: inherit;
 }
 .base-phone-input__number::placeholder,
 .base-phone-input__search::placeholder {
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 .base-phone-input__control:has(:disabled) {
-  background: var(--bs-control-disabled-background);
-  border-color: var(--bs-control-disabled-border);
+  background: var(--ui-control-disabled-background);
+  border-color: var(--ui-control-disabled-border);
 }
 .base-phone-input--error .base-phone-input__control {
-  border-color: var(--bs-color-state-error);
-  background: var(--bs-color-state-error-surface);
+  border-color: var(--ui-color-state-error);
+  background: var(--ui-color-state-error-surface);
 }
 .base-phone-input--success .base-phone-input__control {
-  border-color: var(--bs-color-state-success);
-  background: var(--bs-color-state-success-surface);
+  border-color: var(--ui-color-state-success);
+  background: var(--ui-color-state-success-surface);
 }
 .base-phone-input__menu {
   position: absolute;
@@ -515,10 +515,10 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   left: 0;
   width: min(22rem, 100%);
   padding: var(--space-2);
-  border: var(--border-width-thin) solid var(--bs-color-border-default);
+  border: var(--border-width-thin) solid var(--ui-color-border-default);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  background: var(--bs-overlay-background);
+  background: var(--ui-overlay-background);
 }
 .base-phone-input__menu--above {
   top: auto;
@@ -528,10 +528,10 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   width: 100%;
   height: var(--control-height-sm);
   padding-inline: var(--space-3);
-  border: var(--border-width-thin) solid var(--bs-control-border);
+  border: var(--border-width-thin) solid var(--ui-control-border);
   border-radius: var(--radius-sm);
-  color: var(--bs-color-text-body);
-  background: var(--bs-control-background);
+  color: var(--ui-color-text-body);
+  background: var(--ui-control-background);
   font: inherit;
   transition:
     border-color var(--transition-fast),
@@ -539,13 +539,13 @@ defineExpose({ focus: () => numberInput.value?.focus() });
     background-color var(--transition-fast);
 }
 .base-phone-input__search:hover:not(:disabled):not(:focus) {
-  border-color: var(--bs-control-hover-border);
+  border-color: var(--ui-control-hover-border);
 }
 .base-phone-input__search:focus {
-  border-color: var(--bs-control-focus-border);
+  border-color: var(--ui-control-focus-border);
   outline: none;
-  background: var(--bs-control-focus-background);
-  box-shadow: 0 0 0 var(--space-1) var(--bs-control-focus-shadow);
+  background: var(--ui-control-focus-background);
+  box-shadow: 0 0 0 var(--space-1) var(--ui-control-focus-shadow);
 }
 .base-phone-input__list {
   max-height: 16rem;
@@ -560,37 +560,37 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
-  color: var(--bs-color-text-body);
+  color: var(--ui-color-text-body);
   font-size: var(--font-size-sm);
   cursor: pointer;
 }
 .base-phone-input__option-prefix {
   margin-left: auto;
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
 }
 .base-phone-input__option:hover,
 .base-phone-input__option--active {
-  background: var(--bs-color-surface-muted);
+  background: var(--ui-color-surface-muted);
 }
 .base-phone-input__option--selected {
-  color: var(--bs-color-brand-primary);
+  color: var(--ui-color-brand-primary);
   font-weight: var(--font-weight-semibold);
 }
 .base-phone-input__empty {
   padding: var(--space-2) var(--space-3);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-sm);
 }
 .base-phone-input__message {
   min-height: var(
-    --bs-field-message-min-height,
+    --ui-field-message-min-height,
     var(
       --base-field-message-min-height,
       calc(var(--font-size-xs) * var(--line-height-heading))
     )
   );
   margin-top: calc(var(--space-2) * -0.5);
-  color: var(--bs-color-text-muted);
+  color: var(--ui-color-text-muted);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-heading);
   visibility: hidden;
@@ -599,9 +599,9 @@ defineExpose({ focus: () => numberInput.value?.focus() });
   visibility: visible;
 }
 .base-phone-input--error .base-phone-input__message {
-  color: var(--bs-color-state-error);
+  color: var(--ui-color-state-error);
 }
 .base-phone-input--success .base-phone-input__message {
-  color: var(--bs-color-state-success);
+  color: var(--ui-color-state-success);
 }
 </style>

@@ -33,7 +33,7 @@ pnpm add @alon16/components-ui-base @vuepic/vue-datepicker
 ## Orden de estilos
 
 Importa los estilos de la biblioteca y después el tema del portal. El último importado puede
-sobrescribir los tokens `--bs-*`.
+sobrescribir los tokens `--ui-*`.
 
 ```js
 import "@alon16/components-ui-base/styles.css";

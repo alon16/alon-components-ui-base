@@ -57,9 +57,9 @@ const emit = defineEmits<{ dismiss: [] }>();
 
 <style scoped>
 .base-alert {
-  --alert-background: var(--bs-alert-info-background);
-  --alert-border: var(--bs-alert-info-border);
-  --alert-text: var(--bs-alert-info-text);
+  --alert-background: var(--ui-alert-info-background);
+  --alert-border: var(--ui-alert-info-border);
+  --alert-text: var(--ui-alert-info-text);
 
   position: relative;
   display: flex;
@@ -73,33 +73,33 @@ const emit = defineEmits<{ dismiss: [] }>();
 }
 
 .base-alert--danger {
-  --alert-background: var(--bs-alert-danger-background);
-  --alert-border: var(--bs-alert-danger-border);
-  --alert-text: var(--bs-alert-danger-text);
+  --alert-background: var(--ui-alert-danger-background);
+  --alert-border: var(--ui-alert-danger-border);
+  --alert-text: var(--ui-alert-danger-text);
 }
 
 .base-alert--warning {
-  --alert-background: var(--bs-alert-warning-background);
-  --alert-border: var(--bs-alert-warning-border);
-  --alert-text: var(--bs-alert-warning-text);
+  --alert-background: var(--ui-alert-warning-background);
+  --alert-border: var(--ui-alert-warning-border);
+  --alert-text: var(--ui-alert-warning-text);
 }
 
 .base-alert--info {
-  --alert-background: var(--bs-alert-info-background);
-  --alert-border: var(--bs-alert-info-border);
-  --alert-text: var(--bs-alert-info-text);
+  --alert-background: var(--ui-alert-info-background);
+  --alert-border: var(--ui-alert-info-border);
+  --alert-text: var(--ui-alert-info-text);
 }
 
 .base-alert--primary {
-  --alert-background: var(--bs-alert-primary-background);
-  --alert-border: var(--bs-alert-primary-border);
-  --alert-text: var(--bs-alert-primary-text);
+  --alert-background: var(--ui-alert-primary-background);
+  --alert-border: var(--ui-alert-primary-border);
+  --alert-text: var(--ui-alert-primary-text);
 }
 
 .base-alert--secondary {
-  --alert-background: var(--bs-alert-secondary-background);
-  --alert-border: var(--bs-alert-secondary-border);
-  --alert-text: var(--bs-alert-secondary-text);
+  --alert-background: var(--ui-alert-secondary-background);
+  --alert-border: var(--ui-alert-secondary-border);
+  --alert-text: var(--ui-alert-secondary-text);
 }
 
 .base-alert__content {
@@ -154,11 +154,11 @@ const emit = defineEmits<{ dismiss: [] }>();
 }
 
 .base-alert__close:hover {
-  background: var(--bs-alert-close-hover-background);
+  background: var(--ui-alert-close-hover-background);
 }
 
 .base-alert__close:focus-visible {
-  outline: var(--focus-outline-width) solid var(--bs-color-focus-ring);
+  outline: var(--focus-outline-width) solid var(--ui-color-focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 </style>
