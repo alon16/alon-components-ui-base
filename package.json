@@ -32,6 +32,7 @@
   "scripts": {
     "dev": "vite --config vite.playground.config.js",
     "build": "vite build && vue-tsc -p tsconfig.build.json --noCheck",
+    "build:playground": "vite build --config vite.playground.config.js",
     "check:types": "vue-tsc --noEmit --noCheck",
     "check:playground-types": "vue-tsc --noEmit --noCheck -p tsconfig.playground.json",
     "check:consumer-types": "tsc --noEmit --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck scripts/check-types-consumer.ts",
