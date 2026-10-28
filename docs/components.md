@@ -146,7 +146,7 @@ Además de los valores comunes `sm`, `md` y `lg`, `BaseButton.size` acepta `icon
 nombre.
 
 ```js
-import { tooltip } from "@alon16/components-ui-base";
+import { tooltip } from "@alon16/alon-components-ui-base";
 
 app.directive("tooltip", tooltip);
 ```

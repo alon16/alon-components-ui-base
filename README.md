@@ -15,13 +15,13 @@ eventos. Los proyectos JavaScript pueden consumirlo sin configuración adicional
 
 ## Inicio rápido
 
-> **Importante:** importa siempre `@alon16/components-ui-base/styles.css`. Registrar o importar un
+> **Importante:** importa siempre `@alon16/alon-components-ui-base/styles.css`. Registrar o importar un
 > componente no carga sus estilos automáticamente; sin esta hoja, los controles usarán la
 > apariencia nativa del navegador. Carga primero los estilos de la biblioteca y después el tema
 > del portal para que este pueda definir los tokens `--ui-*`.
 
 ```bash
-pnpm add @alon16/components-ui-base
+pnpm add @alon16/alon-components-ui-base
 ```
 
 Antes de instalar desde GitHub Packages, el portal debe configurar el scope y un token con permiso
@@ -29,7 +29,7 @@ Antes de instalar desde GitHub Packages, el portal debe configurar el scope y un
 
 ```js
 import { createApp } from "vue";
-import "@alon16/components-ui-base/styles.css";
+import "@alon16/alon-components-ui-base/styles.css";
 import "./theme.css";
 import App from "./App.vue";
 
@@ -38,7 +38,7 @@ createApp(App).mount("#app");
 
 ```vue
 <script setup>
-import { BaseButton, BaseInput } from "@alon16/components-ui-base";
+import { BaseButton, BaseInput } from "@alon16/alon-components-ui-base";
 import { ref } from "vue";
 
 const email = ref("");
@@ -56,7 +56,7 @@ El archivo `theme.css` es obligatorio: aporta los colores y estados que la bibli
 elementos, expórtala y regístrala de forma explícita:
 
 ```js
-import { tooltip } from "@alon16/components-ui-base";
+import { tooltip } from "@alon16/alon-components-ui-base";
 
 app.directive("tooltip", tooltip);
 ```
