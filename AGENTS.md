@@ -1,6 +1,6 @@
 # Guía para agentes
 
-Este repositorio contiene una biblioteca privada de componentes Vue 3 tematizables. Estas reglas
+Este repositorio contiene una biblioteca publica de componentes Vue 3 tematizables. Estas reglas
 aplican a todo el proyecto y deben respetarse al crear o modificar componentes.
 
 ## Arquitectura relevante
