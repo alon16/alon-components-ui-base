@@ -49,8 +49,8 @@ independientes de los colores globales de texto, para que cada proyecto pueda aj
 visual de sus formularios. `--ui-form-label-size` permite ajustar el tamaño tipografico de esas
 etiquetas sin modificar el resto de textos con variante `label`.
 
-El paquete incluye los temas `@alon16/components-ui-base/themes/violet.css` y
-`@alon16/components-ui-base/themes/dark-example.css` como referencia y punto de partida. Son opcionales:
+El paquete incluye los temas `@alon16/alon-components-ui-base/themes/violet.css` y
+`@alon16/alon-components-ui-base/themes/dark-example.css` como referencia y punto de partida. Son opcionales:
 un portal puede importarlos o definir su propio archivo de tema.
 
 El tema violeta usa un primario violeta (`#7c3aed`) con texto blanco encima y un secundario ciruela

@@ -27,7 +27,7 @@ comparte el de una persona mantenedora. En CI/CD, usa un token de solo lectura c
 la credencial durante la ejecución, también fuera del directorio versionado.
 
 ```bash
-pnpm add @alon16/components-ui-base @vuepic/vue-datepicker
+pnpm add @alon16/alon-components-ui-base @vuepic/vue-datepicker
 ```
 
 ## Orden de estilos
@@ -36,7 +36,7 @@ Importa los estilos de la biblioteca y después el tema del portal. El último i
 sobrescribir los tokens `--ui-*`.
 
 ```js
-import "@alon16/components-ui-base/styles.css";
+import "@alon16/alon-components-ui-base/styles.css";
 import "@vuepic/vue-datepicker/dist/main.css";
 import "./theme.css";
 ```
@@ -53,7 +53,7 @@ import {
   BaseAutocomplete,
   BaseDateInput,
   BaseSelect,
-} from "@alon16/components-ui-base";
+} from "@alon16/alon-components-ui-base";
 ```
 
 Los componentes no deben registrarse globalmente salvo que el paquete publique un plugin y el

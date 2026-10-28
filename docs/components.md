@@ -161,8 +161,8 @@ accesible `"Cargando"`.
 Registro global antes de montar la aplicación:
 
 ```js
-import { loading } from "@alon16/components-ui-base";
-import "@alon16/components-ui-base/styles.css";
+import { loading } from "@alon16/alon-components-ui-base";
+import "@alon16/alon-components-ui-base/styles.css";
 
 app.directive("loading", loading);
 ```
@@ -172,8 +172,8 @@ Uso local con `<script setup>` (el nombre `vLoading` habilita `v-loading` en el 
 ```vue
 <script setup>
 import { ref } from "vue";
-import { loading as vLoading } from "@alon16/components-ui-base";
-import "@alon16/components-ui-base/styles.css";
+import { loading as vLoading } from "@alon16/alon-components-ui-base";
+import "@alon16/alon-components-ui-base/styles.css";
 
 const cargando = ref(false);
 </script>
@@ -201,7 +201,7 @@ import {
   BaseSearchQL,
   type BaseSearchQLChange,
   type DateRangeValue,
-} from "@alon16/components-ui-base";
+} from "@alon16/alon-components-ui-base";
 
 const selectedFilters = ref<BaseSearchQLChange[]>([
   { name: "customer", value: ".*Ada.*" },
@@ -438,7 +438,7 @@ página actual y no es navegable. El componente no añade `vue-router` como depe
 
 ```vue
 <script setup>
-import { BaseBreadcrumb } from "@alon16/components-ui-base";
+import { BaseBreadcrumb } from "@alon16/alon-components-ui-base";
 
 const breadcrumbs = [
   { name: "Inicio", to: { name: "home" } },
@@ -482,7 +482,7 @@ controlado: recibe el valor del paso actual con `v-model` y nunca modifica el ar
 ```vue
 <script setup>
 import { ref } from "vue";
-import { BaseStepper } from "@alon16/components-ui-base";
+import { BaseStepper } from "@alon16/alon-components-ui-base";
 
 const currentStep = ref("order");
 const steps = [
@@ -666,7 +666,7 @@ En modo remoto, el consumidor solicita los datos cuando cambia la página o el o
 ```vue
 <script setup>
 import { ref, watch } from "vue";
-import { BaseTable, BaseText } from "@alon16/components-ui-base";
+import { BaseTable, BaseText } from "@alon16/alon-components-ui-base";
 
 const page = ref(1);
 const sort = ref({ key: "date", direction: "desc" });

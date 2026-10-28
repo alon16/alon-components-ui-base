@@ -25,6 +25,6 @@ export const examples: Record<
 export function toConsumerSource(source: string) {
   return source.replace(
     /from "(?:\.\.\/)+src\/index"/g,
-    'from "@alon16/components-ui-base"',
+    'from "@alon16/alon-components-ui-base"',
   );
 }

@@ -104,7 +104,7 @@ git push -u origin fix/nombre-del-cambio
 
 En GitHub:
 
-1. Abre el repositorio `components-ui-base`.
+1. Abre el repositorio `alon-components-ui-base`.
 2. Pulsa **Compare & pull request** para la rama que acabas de subir.
 3. Usa `main` como rama de destino.
 4. Describe qué cambió, la versión propuesta y cómo se validó.
@@ -140,7 +140,7 @@ pnpm publish --no-git-checks
 Comprueba que el registro responde con esa versión:
 
 ```bash
-pnpm view @alon16/components-ui-base@0.1.1 version --registry=https://npm.pkg.github.com
+pnpm view @alon16/alon-components-ui-base@0.1.1 version --registry=https://npm.pkg.github.com
 ```
 
 Una versión ya publicada no se puede sobrescribir. Si se detecta un problema, incrementa la versión
@@ -152,7 +152,7 @@ La publicación de la librería no modifica automáticamente ningún portal. En 
 la vaya a adoptar, instala la versión exacta, prueba y abre su propio PR:
 
 ```bash
-pnpm add @alon16/components-ui-base@0.1.1
+pnpm add @alon16/alon-components-ui-base@0.1.1
 pnpm run build
 ```
 

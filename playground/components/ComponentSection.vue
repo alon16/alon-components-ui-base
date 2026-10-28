@@ -19,8 +19,8 @@ const props = withDefaults(
 const importCode = computed(() => {
   const names = props.imports.length ? props.imports : [props.name];
   return names.length > 2
-    ? `import {\n${names.map((name) => `  ${name},`).join("\n")}\n} from "@alon16/components-ui-base";`
-    : `import { ${names.join(", ")} } from "@alon16/components-ui-base";`;
+    ? `import {\n${names.map((name) => `  ${name},`).join("\n")}\n} from "@alon16/alon-components-ui-base";`
+    : `import { ${names.join(", ")} } from "@alon16/alon-components-ui-base";`;
 });
 </script>
 

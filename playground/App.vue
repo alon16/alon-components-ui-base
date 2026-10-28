@@ -69,10 +69,10 @@ const exampleCount = catalog.reduce(
   0,
 );
 
-const installCode = `pnpm add @alon16/components-ui-base @vuepic/vue-datepicker`;
+const installCode = `pnpm add @alon16/alon-components-ui-base @vuepic/vue-datepicker`;
 const setupCode = `// main.ts
 import { createApp } from "vue";
-import "@alon16/components-ui-base/styles.css";
+import "@alon16/alon-components-ui-base/styles.css";
 import "@vuepic/vue-datepicker/dist/main.css";
 // Tu tema va al final para sobrescribir los tokens --ui-*.
 import "./theme.css";
@@ -82,7 +82,7 @@ import App from "./App.vue";
 createApp(App).mount("#app");`;
 const usageCode = `<script setup lang="ts">
 import { ref } from "vue";
-import { BaseButton, BaseInput } from "@alon16/components-ui-base";
+import { BaseButton, BaseInput } from "@alon16/alon-components-ui-base";
 
 const name = ref("");
 <\/script>

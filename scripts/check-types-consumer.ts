@@ -7,7 +7,7 @@ import {
   BaseStepper,
   BaseTabs,
   loading,
-} from "@alon16/components-ui-base";
+} from "@alon16/alon-components-ui-base";
 import type {
   BaseButtonProps,
   BaseBreadcrumbItem,
@@ -20,7 +20,7 @@ import type {
   BaseStepperStep,
   BaseTabsProps,
   LoadingDirective,
-} from "@alon16/components-ui-base";
+} from "@alon16/alon-components-ui-base";
 
 const buttonProps: BaseButtonProps = {
   variant: "secondary",

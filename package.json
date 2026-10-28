@@ -20,12 +20,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alon16/components-ui-base.git"
+    "url": "git+https://github.com/alon16/alon-components-ui-base.git"
   },
   "bugs": {
-    "url": "https://github.com/alon16/components-ui-base/issues"
+    "url": "https://github.com/alon16/alon-components-ui-base/issues"
   },
-  "homepage": "https://github.com/alon16/components-ui-base#readme",
+  "homepage": "https://github.com/alon16/alon-components-ui-base#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
