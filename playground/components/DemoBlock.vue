@@ -3,6 +3,7 @@ import { computed, inject, ref, useId } from "vue";
 
 import { BaseButton, BaseIcon } from "../../src/index";
 import { examples, toConsumerSource } from "../examples";
+import { useMessages } from "../i18n";
 import { themeKey } from "../theme";
 import CodeBlock from "./CodeBlock.vue";
 import RichText from "./RichText.vue";
@@ -20,6 +21,7 @@ const props = withDefaults(
 );
 
 const theme = inject(themeKey);
+const t = useMessages();
 const codeVisible = ref(true);
 const codeId = useId();
 
@@ -49,7 +51,7 @@ const filename = computed(
         @click="codeVisible = !codeVisible"
       >
         <BaseIcon name="grid" size="sm" decorative />
-        {{ codeVisible ? "Ocultar código" : "Ver código" }}
+        {{ codeVisible ? t.hideCode : t.showCode }}
       </BaseButton>
     </header>
 
@@ -60,7 +62,7 @@ const filename = computed(
         v-bind="themed ? { dark: theme === 'dark' } : {}"
       />
       <p v-else class="pg-demo__missing">
-        No existe el ejemplo «{{ example }}».
+        {{ t.missingExample(example) }}
       </p>
     </div>
 

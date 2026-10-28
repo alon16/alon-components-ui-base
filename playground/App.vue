@@ -16,9 +16,11 @@ import CodeBlock from "./components/CodeBlock.vue";
 import ComponentSection from "./components/ComponentSection.vue";
 import DemoBlock from "./components/DemoBlock.vue";
 import RichText from "./components/RichText.vue";
+import { localeKey, messages, translate, type Locale } from "./i18n";
 import { themeKey, type Theme } from "./theme";
 
-const requestedTheme = new URLSearchParams(window.location.search).get("theme");
+const searchParams = new URLSearchParams(window.location.search);
+const requestedTheme = searchParams.get("theme");
 const theme = ref<Theme>(
   requestedTheme === "dark" || requestedTheme === "light"
     ? requestedTheme
@@ -37,6 +39,44 @@ watch(
   { immediate: true },
 );
 
+const requestedLocale = searchParams.get("lang");
+const locale = ref<Locale>(
+  requestedLocale === "es" || requestedLocale === "en"
+    ? requestedLocale
+    : navigator.language.toLowerCase().startsWith("en")
+      ? "en"
+      : "es",
+);
+provide(localeKey, locale);
+const t = computed(() => messages[locale.value]);
+
+watch(
+  locale,
+  (value) => {
+    document.documentElement.lang = value;
+  },
+  { immediate: true },
+);
+
+const localizedCatalog = computed(() =>
+  catalog.map((group) => ({
+    ...group,
+    label: translate(group.label, locale.value),
+    items: group.items.map((item) => ({
+      ...item,
+      name: translate(item.name, locale.value),
+      description: translate(item.description, locale.value),
+      status: item.status && translate(item.status, locale.value),
+      demos: item.demos.map((demo) => ({
+        ...demo,
+        title: translate(demo.title, locale.value),
+        description:
+          demo.description && translate(demo.description, locale.value),
+      })),
+    })),
+  })),
+);
+
 const query = ref("");
 const navOpen = ref(false);
 const activeId = ref("getting-started");
@@ -46,8 +86,8 @@ const normalize = (value: string) =>
 
 const filteredCatalog = computed(() => {
   const term = normalize(query.value.trim());
-  if (!term) return catalog;
-  return catalog
+  if (!term) return localizedCatalog.value;
+  return localizedCatalog.value
     .map((group) => ({
       ...group,
       items: group.items.filter((item) =>
@@ -70,17 +110,20 @@ const exampleCount = catalog.reduce(
 );
 
 const installCode = `pnpm add @alon16/alon-components-ui-base @vuepic/vue-datepicker`;
-const setupCode = `// main.ts
+const setupCode = computed(
+  () => `// main.ts
 import { createApp } from "vue";
 import "@alon16/alon-components-ui-base/styles.css";
 import "@vuepic/vue-datepicker/dist/main.css";
-// Tu tema va al final para sobrescribir los tokens --ui-*.
+// ${t.value.setupThemeComment}
 import "./theme.css";
 
 import App from "./App.vue";
 
-createApp(App).mount("#app");`;
-const usageCode = `<script setup lang="ts">
+createApp(App).mount("#app");`,
+);
+const usageCode = computed(
+  () => `<script setup lang="ts">
 import { ref } from "vue";
 import { BaseButton, BaseInput } from "@alon16/alon-components-ui-base";
 
@@ -88,9 +131,10 @@ const name = ref("");
 <\/script>
 
 <template>
-  <BaseInput v-model="name" label="Nombre" />
-  <BaseButton :disabled="!name">Guardar</BaseButton>
-</template>`;
+  <BaseInput v-model="name" label="${t.value.usageNameLabel}" />
+  <BaseButton :disabled="!name">${t.value.usageSave}</BaseButton>
+</template>`,
+);
 
 let observer: IntersectionObserver | undefined;
 
@@ -126,6 +170,7 @@ onUnmounted(() => {
   observer?.disconnect();
   window.removeEventListener("keydown", handleKeydown);
   delete document.documentElement.dataset.theme;
+  document.documentElement.lang = "es";
 });
 
 watch(filteredCatalog, () => nextTick(observeSections));
@@ -133,14 +178,14 @@ watch(filteredCatalog, () => nextTick(observeSections));
 
 <template>
   <div class="pg-app">
-    <a class="pg-skip-link" href="#pg-main">Saltar al contenido</a>
+    <a class="pg-skip-link" href="#pg-main">{{ t.skipLink }}</a>
 
     <header class="pg-topbar">
       <span class="pg-topbar__menu">
         <BaseButton
           size="icon"
           variant="ghost"
-          :aria-label="navOpen ? 'Cerrar navegación' : 'Abrir navegación'"
+          :aria-label="navOpen ? t.closeNav : t.openNav"
           :aria-expanded="navOpen"
           aria-controls="pg-sidebar"
           @click="navOpen = !navOpen"
@@ -158,10 +203,21 @@ watch(filteredCatalog, () => nextTick(observeSections));
       </a>
 
       <div class="pg-topbar__actions">
+        <span class="pg-locale">
+          <span class="pg-locale__option" aria-hidden="true">ES</span>
+          <BaseSwitch
+            id="pg-english"
+            :model-value="locale === 'en'"
+            label="EN"
+            :aria-label="t.english"
+            size="sm"
+            @update:model-value="locale = $event ? 'en' : 'es'"
+          />
+        </span>
         <BaseSwitch
           id="pg-dark-theme"
           :model-value="theme === 'dark'"
-          label="Tema oscuro"
+          :label="t.darkTheme"
           size="sm"
           @update:model-value="theme = $event ? 'dark' : 'light'"
         />
@@ -177,13 +233,13 @@ watch(filteredCatalog, () => nextTick(observeSections));
         <div class="pg-sidebar__search">
           <BaseInput
             v-model="query"
-            label="Buscar componente"
-            placeholder="Ej.: tabla, fecha…"
+            :label="t.searchLabel"
+            :placeholder="t.searchPlaceholder"
             size="sm"
           />
         </div>
 
-        <nav class="pg-nav" aria-label="Componentes">
+        <nav class="pg-nav" :aria-label="t.navLabel">
           <a
             class="pg-nav__link"
             :class="{ 'pg-nav__link--active': activeId === 'getting-started' }"
@@ -193,11 +249,11 @@ watch(filteredCatalog, () => nextTick(observeSections));
             href="#getting-started"
             @click="navOpen = false"
           >
-            Primeros pasos
+            {{ t.gettingStarted }}
           </a>
           <div
             v-for="group in filteredCatalog"
-            :key="group.label"
+            :key="group.id"
             class="pg-nav__group"
           >
             <p class="pg-nav__group-label">
@@ -217,7 +273,7 @@ watch(filteredCatalog, () => nextTick(observeSections));
             </a>
           </div>
           <p v-if="!filteredCatalog.length" class="pg-nav__empty">
-            No hay componentes que coincidan con «{{ query }}».
+            {{ t.noMatches(query) }}
           </p>
         </nav>
       </aside>
@@ -235,47 +291,45 @@ watch(filteredCatalog, () => nextTick(observeSections));
           class="pg-hero"
           aria-labelledby="getting-started-title"
         >
-          <p class="pg-hero__eyebrow">Biblioteca de componentes Vue 3</p>
+          <p class="pg-hero__eyebrow">{{ t.heroEyebrow }}</p>
           <h1 id="getting-started-title" class="pg-hero__title">
-            Componentes tematizables para portales web
+            {{ t.heroTitle }}
           </h1>
           <p class="pg-hero__lead">
-            Cada ejemplo se renderiza en vivo desde el código fuente y muestra
-            exactamente el código que necesitas para implementarlo. Alterna el
-            tema oscuro para validar los tokens <code>--ui-*</code>.
+            <RichText :text="t.heroLead" />
           </p>
           <dl class="pg-stats">
             <div>
-              <dt>Componentes</dt>
+              <dt>{{ t.statComponents }}</dt>
               <dd>{{ componentCount }}</dd>
             </div>
             <div>
-              <dt>Ejemplos</dt>
+              <dt>{{ t.statExamples }}</dt>
               <dd>{{ exampleCount }}</dd>
             </div>
             <div>
-              <dt>Temas</dt>
+              <dt>{{ t.statThemes }}</dt>
               <dd>2</dd>
             </div>
           </dl>
 
           <ol class="pg-steps">
             <li>
-              <h2 class="pg-steps__title">Instala el paquete</h2>
+              <h2 class="pg-steps__title">{{ t.stepInstall }}</h2>
               <CodeBlock :code="installCode" language="bash" />
             </li>
             <li>
-              <h2 class="pg-steps__title">Importa los estilos y tu tema</h2>
+              <h2 class="pg-steps__title">{{ t.stepSetup }}</h2>
               <CodeBlock :code="setupCode" language="ts" filename="main.ts" />
             </li>
             <li>
-              <h2 class="pg-steps__title">Usa los componentes</h2>
+              <h2 class="pg-steps__title">{{ t.stepUse }}</h2>
               <CodeBlock :code="usageCode" filename="App.vue" />
             </li>
           </ol>
         </section>
 
-        <template v-for="group in filteredCatalog" :key="group.label">
+        <template v-for="group in filteredCatalog" :key="group.id">
           <h2 class="pg-group-title">
             <BaseIcon :name="group.icon" size="md" decorative />
             {{ group.label }}
@@ -298,9 +352,7 @@ watch(filteredCatalog, () => nextTick(observeSections));
         </template>
 
         <footer class="pg-footer">
-          <RichText
-            text="Referencia completa de props, eventos y slots en `docs/components.md`; tokens de tema en `docs/theming.md`."
-          />
+          <RichText :text="t.footer" />
         </footer>
       </main>
     </div>

@@ -2,6 +2,7 @@
 import { computed, onUnmounted, ref } from "vue";
 
 import { BaseButton, BaseIcon } from "../../src/index";
+import { useMessages } from "../i18n";
 import { highlight, type CodeLanguage } from "../utils/highlight";
 
 const props = withDefaults(
@@ -13,6 +14,7 @@ const props = withDefaults(
   { language: "vue", filename: "" },
 );
 
+const t = useMessages();
 const copied = ref(false);
 let copiedTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -48,14 +50,14 @@ onUnmounted(() => clearTimeout(copiedTimer));
       <BaseButton
         size="sm"
         variant="ghost"
-        :aria-label="copied ? 'Código copiado' : 'Copiar código'"
+        :aria-label="copied ? t.copiedLabel : t.copyLabel"
         @click="copy"
       >
         <BaseIcon :name="copied ? 'check' : 'copy'" size="sm" decorative />
-        {{ copied ? "Copiado" : "Copiar" }}
+        {{ copied ? t.copied : t.copy }}
       </BaseButton>
       <span class="pg-visually-hidden" aria-live="polite">{{
-        copied ? "Código copiado al portapapeles" : ""
+        copied ? t.copiedAnnouncement : ""
       }}</span>
     </div>
     <pre class="pg-code__pre" tabindex="0"><code v-html="html" /></pre>

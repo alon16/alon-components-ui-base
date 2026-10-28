@@ -128,11 +128,30 @@ code {
 }
 
 .pg-topbar__actions {
+  /* Los switches no muestran errores aquí: sin el espacio reservado para el
+     mensaje quedan centrados verticalmente en la barra. */
+  --ui-field-gap: var(--space-0);
+  --ui-field-message-min-height: var(--space-0);
+
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-5);
   margin-left: auto;
   white-space: nowrap;
+}
+
+.pg-locale {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Igual que la etiqueta del switch, que muestra «EN» al otro lado. */
+.pg-locale__option {
+  color: var(--ui-form-label-color);
+  font-size: var(--ui-form-label-size);
+  font-weight: var(--text-label-weight);
+  line-height: var(--text-label-leading);
 }
 
 /* Estructura */
@@ -620,5 +639,24 @@ code {
   .pg-steps > li::before {
     position: static;
     margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 560px) {
+  .pg-brand__version {
+    display: none;
+  }
+
+  /* El nombre se conserva para lectores de pantalla como nombre del enlace. */
+  .pg-brand__name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .pg-topbar__actions {
+    gap: var(--space-3);
   }
 }

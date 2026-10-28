@@ -2,6 +2,7 @@
 import { computed } from "vue";
 
 import { BaseBadge } from "../../src/index";
+import { useMessages } from "../i18n";
 import CodeBlock from "./CodeBlock.vue";
 import RichText from "./RichText.vue";
 
@@ -15,6 +16,8 @@ const props = withDefaults(
   }>(),
   { imports: () => [], status: "" },
 );
+
+const t = useMessages();
 
 const importCode = computed(() => {
   const names = props.imports.length ? props.imports : [props.name];
@@ -34,7 +37,11 @@ const importCode = computed(() => {
       <p class="pg-component__description">
         <RichText :text="description" />
       </p>
-      <CodeBlock :code="importCode" language="ts" filename="Importación" />
+      <CodeBlock
+        :code="importCode"
+        language="ts"
+        :filename="t.importFilename"
+      />
     </header>
     <div class="pg-component__demos">
       <slot />
